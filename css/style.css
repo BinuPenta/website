@@ -1071,6 +1071,11 @@ a{
         padding: 18px 0;
     }
 }
+@media(max-width: 412px){
+    .penta-home__body-parallax-footer-info {
+        top: 75%;
+    }
+}
 
 @media(max-width: 390px){
     .top-layer .penta-home__body-image {
