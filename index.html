@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/64190a9cbe.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <div class="penta-home__body">
@@ -18,7 +21,7 @@
         <header class="penta-home__body-header">
             <div class="penta-home__body-header-logo"><img src="./assets/logo_new.png" alt="logo"></div>
             <nav class="penta-home__body-navbar">
-                <div class="penta-home__body-navbar-hamburger">
+                <div class="penta-home__body-navbar-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="penta-home__body-navbar-hamburger-bar"></span>
                     <span class="penta-home__body-navbar-hamburger-bar"></span>
                     <span class="penta-home__body-navbar-hamburger-bar"></span>
@@ -32,6 +35,17 @@
                         <li><a class="nav-link" href="#">Contact</a></li>
                     </ul>
                 </div>
+                <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+                <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    ...
+                  </div>
+                </div> -->
             </nav>
         </header>
         <div class="penta-home__body-content-body">
@@ -329,7 +343,7 @@
         </div>
     </div>
 </div>
-
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./js/tilt/tilt.jquery.js"></script>
 <script src="./js/index.js"></script>
 <!-- <script src="./js/animejs/lib/anime.min.js"></script> -->
