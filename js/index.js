@@ -171,14 +171,23 @@ $(document).ready(function(){
             'opacity': 1,
         });
        }
-        if(parallax.scrollTop() >= footerResponsive && parallax.scrollTop() <= (footerResponsive + 50)){
-            const scrollValue = parallax.scrollTop() - Math.floor(parallax.scrollTop()/100) * 100
-            if(scrollValue <= 50){
+       if(screenWidth >= 428){
+            if(parallax.scrollTop() >= footerResponsive && parallax.scrollTop() <= (footerResponsive + 50)){
+                const scrollValue = parallax.scrollTop() - Math.floor(parallax.scrollTop()/100) * 100
+                if(scrollValue <= 50){
+                    
+                    $(footerImg).css({
+                        'transform': `translate(0%, ${50 - scrollValue}%)`
+                    })
+                }
+            }
+            else{
                 $(footerImg).css({
-                    'transform': `translate(0%, ${50 - scrollValue}%)`
+                    'transform': `translate(0%, 0%)`
                 })
             }
-        }
+       }
+        
 
     }
 
