@@ -12,6 +12,10 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow: hidden;
+}
+body{
+    height: 100%;
 }
 *{
     margin: 0;
