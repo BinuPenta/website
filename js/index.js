@@ -25,6 +25,7 @@ $(document).ready(function(){
     // console.log(isSafari)
    
     var screenWidth =  $(window).width();
+    responsiveMenuBar(screenWidth);
 
     // $(window).resize(function() {
     //     // This will execute whenever the window is resized
@@ -255,4 +256,19 @@ const isSafariBrowser = function() {
          safariAgent = false;
      }
      return safariAgent;
+}
+
+const responsiveMenuBar = function(screenWidth) {
+    const menuWeb = $('.penta-home__body-navbar')
+    const menuMobile = $('.penta-home__body-navbar-mobile')
+    // const menuBar = $('.penta-home__body-navbar-menu')
+    // const canvasMenu =  $('#offcanvasRight')
+    if(screenWidth <= 428) {
+        menuWeb.css({'display': 'none'})
+        menuMobile.css({'display': 'flex'})
+    }
+    else{
+        menuMobile.css({'display': 'none'})
+        menuWeb.css({'display': 'flex'})
+    }
 }
