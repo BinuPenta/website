@@ -265,10 +265,10 @@ const responsiveMenuBar = function(screenWidth) {
     // const canvasMenu =  $('#offcanvasRight')
     if(screenWidth <= 428) {
         menuWeb.css({'display': 'none'})
-        menuMobile.css({'display': 'flex'})
+        // menuMobile.css({'display': 'flex'})
     }
     else{
         menuMobile.css({'display': 'none'})
-        menuWeb.css({'display': 'flex'})
+        // menuWeb.css({'display': 'flex'})
     }
 }
