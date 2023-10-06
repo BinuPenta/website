@@ -9,9 +9,11 @@ $(document).ready(function(){
     const midTextLayer = $('.mid-layer').find('.penta-home__body-text');
     const topLayer = $('.top-layer');
     const topTextLayer = $('.top-layer').find('.penta-home__body-text');
-    const productsSection = $('.penta-home__body-parallax-products')
+    // const productsSection = $('.penta-home__body-parallax-products')
+    
 
     // products
+    const productCarousel = $('#penta_home_products_carousel')
     const productBox = $('.penta-home__body-parallax-products-content-box')
     const prevBtn = $('.penta-home__body-parallax-products-controls-prev')
     const nextBtn = $('.penta-home__body-parallax-products-controls-next')
@@ -19,6 +21,34 @@ $(document).ready(function(){
 
     // footer
     const footerImg = $('.penta-home__body-parallax-footer-img img')
+
+    productCarousel.owlCarousel({
+ 
+        navigation : false, // Show next and prev buttons
+        loop:true,
+        slideSpeed : 600,
+        paginationSpeed : 600,
+   
+        items : 1, 
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false,
+   
+        autoplay:true,
+        autoplayTimeout:4000,
+        // autoplayHoverPause:true
+
+    });
+    // productCarousel.on('mousewheel', '.owl-stage', function (e) {
+    //     e.preventDefault();
+    //     if (e.deltaY>0) {
+    //         productCarousel.trigger('next.owl');
+    //     } else {
+    //         productCarousel.trigger('prev.owl');
+    //     }
+        
+    // });
     
     // Safari 3.0+ "[object HTMLElementConstructor]" 
     // var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
@@ -192,17 +222,17 @@ $(document).ready(function(){
 
     }
 
-    const eventProductThemeToggle = () => {
+    // const eventProductThemeToggle = () => {
 
-        var vh =  window.innerHeight
-        var screenMath = ((parallax.scrollTop()/ vh)).toFixed(2)
-        if(screenMath >= 3.70 && screenMath <= 3.90){
-            $(productBox).removeClass('transparentbg')
-        }
-        else{
-            $(productBox).addClass('transparentbg')
-        }
-    }
+    //     var vh =  window.innerHeight
+    //     var screenMath = ((parallax.scrollTop()/ vh)).toFixed(2)
+    //     if(screenMath >= 3.70 && screenMath <= 3.90){
+    //         $(productBox).removeClass('transparentbg')
+    //     }
+    //     else{
+    //         $(productBox).addClass('transparentbg')
+    //     }
+    // }
 
     nextBtn.on('click', () => {
         if($(productBox[i]).hasClass('active')){
@@ -228,7 +258,7 @@ $(document).ready(function(){
         var footerResponsive =  responsiveScreenFooter(screenWidth);
         moveLogo();
         eventTextParallax()
-        eventProductThemeToggle()
+        // eventProductThemeToggle()
         eventFooterParallax(footerResponsive)
     })
 })
@@ -261,14 +291,10 @@ const isSafariBrowser = function() {
 const responsiveMenuBar = function(screenWidth) {
     const menuWeb = $('.penta-home__body-navbar')
     const menuMobile = $('.penta-home__body-navbar-mobile')
-    // const menuBar = $('.penta-home__body-navbar-menu')
-    // const canvasMenu =  $('#offcanvasRight')
     if(screenWidth <= 428) {
         menuWeb.css({'display': 'none'})
-        // menuMobile.css({'display': 'flex'})
     }
     else{
         menuMobile.css({'display': 'none'})
-        // menuWeb.css({'display': 'flex'})
     }
 }

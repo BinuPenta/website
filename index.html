@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/64190a9cbe.js" crossorigin="anonymous"></script>
-        <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+<!-- Owl Carousel -->
+    <link rel="stylesheet" href="./js/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./js/OwlCarousel/dist/assets/owl.theme.default.min.css">
 </head>
 <body>
     <div class="penta-home__body">
@@ -197,51 +199,49 @@
                     </div>
                 </div>
                 <div class="penta-home__body-parallax-products parallax-wrapper-group">
-                    <div class="penta-home__body-parallax-products-content">
+                    <div id='penta_home_products_carousel' class="penta-home__body-parallax-products-content owl-carousel owl-theme">
                         <div class="penta-home__body-parallax-products-content-box pentaserve active">
                             <div class="penta-home__body-parallax-products-content-box-text">
-                                <h2>Products.</h2>
+                                <h2><span>Products.</span></h2>
                                 <h1 class="text-gradient">PentaServe</h1>
                                 <p>Smart CRM solution for streamlined operations, data-driven insights, and exceptional customer support.</p>
                                 <a href="#">Read More</a>
                             </div>
                             <div class="penta-home__body-parallax-products-content-box-image">
-                                <img src="./assets/products/services.png" alt="pentaserve">
+                                <img src="./assets/products/pentaserve.png" alt="pentaserve">
                             </div>
                         </div>
                         <div class="penta-home__body-parallax-products-content-box pentalearn">
                             <div class="penta-home__body-parallax-products-content-box-text">
-                                <h2>Products.</h2>
+                                <h2><span>Products.</span></h2>
                                 <h1 class="text-gradient">PentaLearn</h1>
                                 <p>AI-powered eLearning platform for personalized content, intelligent recommendations, and timely feedback to tailor learning and enhance skills.</p>
                                 <a href="#">Read More</a>
                             </div>
                             <div class="penta-home__body-parallax-products-content-box-image">
-                                <img src="./assets/products/Pentalearn.jpg" alt="penatpedia">
+                                <img src="./assets/products/pentapedia_web.png" alt="penatpedia">
                             </div>
                         </div>
                         <div class="penta-home__body-parallax-products-content-box acutestudy">
                             <div class="penta-home__body-parallax-products-content-box-text">
-                                <h2>Products.</h2>
+                                <h2><span>Products.</span></h2>
                                 <h1 class="text-gradient">AcuteStudy</h1>
                                 <p>Expedites exam prep for OET, IELTS & CBT with smart resources to enhance skills, pinpoint weaknesses and strategize revision.</p>
                                 <a href="#">Read More</a>
                             </div>
                             <div class="penta-home__body-parallax-products-content-box-image">
-                                <img src="./assets/products/Acuteweb.jpg" alt="pentaserve">
+                                <img src="./assets/products/acute-study_app.png" alt="pentaserve">
                             </div>
                         </div>
                     </div>
-                    <div class="penta-home__body-parallax-products-controls">
+                    <!-- <div class="penta-home__body-parallax-products-controls">
                         <div class="penta-home__body-parallax-products-controls-prev">
-                            <!-- <i class="fa-thin fa-chevron-left"></i> -->
                             <i class="fa-thin fa-arrow-left-long fa-beat fa-xs"></i>
                         </div>
                         <div class="penta-home__body-parallax-products-controls-next">
-                            <!-- <i class="fa-thin fa-chevron-right"></i> -->
                             <i class="fa-thin fa-arrow-right-long fa-beat fa-xs"></i>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
 
@@ -316,7 +316,7 @@
 
                 <div class="penta-home__body-parallax-footer parallax-wrapper-group">
                     <div class="penta-home__body-parallax-footer-img">
-                        <img src="./assets/products/footer.png" alt="footer">
+                        <img src="./assets/footer.png" alt="footer">
                     </div>
                     <!-- <div class="penta-home__body-parallax-footer-content"> -->
                         <div class="penta-home__body-parallax-footer-info">
@@ -361,6 +361,8 @@
 <script src="./js/tilt/tilt.jquery.js"></script>
 <script src="./js/index.js"></script>
 <!-- <script src="./js/animejs/lib/anime.min.js"></script> -->
-
+<!--  -->
+<!-- <script src="jquery.min.js"></script> -->
+<script src="./js/OwlCarousel/dist/owl.carousel.min.js"></script>
 </body>
 </html>

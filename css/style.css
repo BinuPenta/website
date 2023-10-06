@@ -497,39 +497,42 @@ a{
  .penta-home__body-parallax-services-card:hover .penta-home__body-parallax-services-card-icon{
     opacity: 0;
  }
+
+
+
+
+
  /* Products */
 
  .penta-home__body-parallax-products{
     position: relative;
     width: 100%;
-    height: 150vh;
+    height: 110vh;
+    margin: 5% 0;
     transition: all 1s linear;
  }
+ #penta_home_products_carousel {
+    padding: 6% 0;
+ }
 .penta-home__body-parallax-products-content{
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     width: 100%;
     height: 100%;
 }
 .penta-home__body-parallax-products-content-box{
-    width: 100%;
-    position: absolute;
-    padding: 0 10%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.05s;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 .penta-home__body-parallax-products-content-box-image img{
-    position: absolute;
+    /* position: absolute;
     top: 16%;
     left: 10%;
     width: 50%;
     height: 80%;
-    object-fit: contain;
+    object-fit: contain; */
     /* opacity: 0;
     transition: 0.5s; */
-    background-position: center;
+    /* background-position: center; */
 }
 .penta-home__body-parallax-products-content-box.active{
     opacity: 1;
@@ -539,19 +542,14 @@ a{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* right: 0; */
     width: 60px;
 }
 .penta-home__body-parallax-products-controls-prev{
-    /* position: absolute;
-    right: 90rem; */
     position: absolute;
     left: 5rem;
     bottom: 10rem;
 }
 .penta-home__body-parallax-products-controls-next{
-    /* position: absolute;
-    right: 6rem; */
     position: absolute;
     left: 110rem;
     top: 25rem;
@@ -561,7 +559,7 @@ a{
     color: #ffffff;
 }
 
-.pentaserve{
+/* .pentaserve{
     background-color: #deac4f;
 }
 .pentalearn{
@@ -569,29 +567,35 @@ a{
 }
 .acutestudy{
     background-color: #1b90a7;
-}
+} */
 .transparentbg{
     background-color: transparent;
 }
 
 .penta-home__body-parallax-products-content-box-text{
-    position: absolute;
-    top: 50%;
-    left: 62%;
-    z-index: 1;
     color: #fff;
-    width: 25%;
     padding: 30px;
-    border-radius: 10px;
-    background-color: #00000096;
+    padding: 120px 70px;
+}
+.penta-home__body-parallax-products-content-box-image{
+    width: 75%;
 }
 
 .penta-home__body-parallax-products-content-box-text h2{
     text-align: right;
-    opacity: 0.4;
+    /* opacity: 0.4; */
     padding-bottom: 40px;
     font-size: 28px;
     font-family: gothambold;
+}
+.penta-home__body-parallax-products-content-box-text h2 span{
+    background: linear-gradient( 360deg, #e2272b 20%, #1f508a 20% 40%, #f9f9ed00 40% 60% );
+    background-size: 100% 500%;
+    background-position: top;
+    width: 100%;
+    color: #fff;
+    padding: 0 0.1rem;
+    transition: background-position 0.7s, color 0.5s;
 }
 .penta-home__body-parallax-products-content-box-text h1{
     padding-bottom: 20px;
@@ -614,6 +618,34 @@ a{
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
  }
+
+ /* products animations */
+ .owl-item.active h1, .owl-item.active h2, .owl-item.active p, .owl-item.active a{
+    animation: slideUp 1s linear forwards; 
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+
+@keyframes slideUp {
+    0%{transform: translateY(100%);opacity: 0;}
+    50%{transform: translateY(50%);opacity: 0.2;}
+    100%{transform: translateY(0%);opacity: 1;}
+}
+
+.owl-item.active .penta-home__body-parallax-products-content-box-text h2 span{
+    animation: SlideBgOnActive 1s linear forwards;
+    animation-delay: 1.8s;
+}
+
+@keyframes SlideBgOnActive {
+    0%{background-position-y: 566%;padding:0 0.3rem;}
+    50%{background-position-y: 600%;padding:0 0.3rem;color:white}
+    100%{background-position-y: 600%;padding:0 0.3rem;color:white}
+}
+
+
+
 
 
 /* Contact  Form*/
@@ -657,10 +689,10 @@ a{
     justify-content: center;
 }
 .penta-home__body-parallax-contact-form form{
-    background-color: #fff;
+    background-color: #000;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 8px 8px 11px 2px #ffffffa8;
+    box-shadow: 5px 5px 10px 10px #3e2452;
 }
 
 .penta-home__body-parallax-contact-form-row{
@@ -679,21 +711,21 @@ a{
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: #000;
 }
 .penta-home__body-parallax-contact-form-row-label{
     position: relative;
     font-size: 18px;
     font-family: textfont;    
     padding-bottom: 4px;
+    color: #fff;
 }
 .penta-home__body-parallax-contact-form-row-input{
     padding: 10px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 1px solid #0e0d0d;
-}
-.penta-home__body-parallax-contact-form-row-message{
-
+    background: #000;
+    border-bottom: 1px solid #ffffff;
 }
 .penta-home__body-parallax-contact-form-action{
     font-family: textfont;
@@ -702,12 +734,12 @@ a{
     padding: 8px 20px;
     margin-top: 15px;
     border: none;
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0px 10px 12px rgb(0 0 0 / 29%);
+    box-shadow: 0px 10px 12px rgb(61 35 81);
 }
 
 /* Footer */
@@ -717,13 +749,10 @@ a{
 }
 
 .penta-home__body-parallax-footer-img img{
-    opacity: 0;
+    opacity: 1;
     width: 100%;
-    /* transform: translateY(0) scale(1); */
     transform: translate(0%, 50%);
-    /* transition: transform 6s linear; */
     transition: transform 2s ease-out;
-    /* overflow-y: hidden; */
 }
 .penta-home__body-parallax-footer-info {
     position: absolute;
@@ -737,9 +766,6 @@ a{
 }
 .penta-home__body-parallax-footer-info-details{
     color: #ffffff;
-    /* background-color: #00000069;
-    padding: 50px;
-    border-radius: 10px; */
 }
 .penta-home__body-parallax-footer-info-details h3{
     font-family: textfont;
@@ -841,6 +867,13 @@ a{
     }
     .penta-home__body-parallax-services-card-content p {
         font-size: 12px;
+    }
+    .penta-home__body-parallax-products {
+        top: 35%;
+    }
+    .penta-home__body-parallax-products-content-box-image{
+        width: 100%;
+        height: 100%;
     }
     .penta-home__body-parallax-products-content-box-text {
         padding: 25px;
@@ -966,6 +999,19 @@ a{
     }    
     .penta-home__body-parallax-footer-img {
         top: 68%;
+    }
+    .penta-home__body-parallax-products-content-box {
+        flex-direction: column-reverse;
+    }
+    .penta-home__body-parallax-products {
+        top: 0%;
+        margin: 0;
+    }
+    #penta_home_products_carousel {
+        padding: 6% 0;
+        position: relative;
+        top: 20%;
+        height: fit-content;
     }
 }
 @media(max-width: 425px){
