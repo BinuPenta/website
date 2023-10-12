@@ -172,12 +172,13 @@ $(document).ready(function(){
         hamburger.toggleClass("active");
         navMenu.toggleClass("active");
         if(navMenu.hasClass("active")){
-            if(screenWidth <= 425){
-                navMenu[0].style.width = "75%"
-            }
-            else{
-                navMenu[0].style.width = "50%"
-            }
+            navMenu[0].style.width = "100%"
+            // if(screenWidth <= 425){
+            //     navMenu[0].style.width = "100%"
+            // }
+            // else{
+            //     navMenu[0].style.width = "100%"
+            // }
             
         }
         else{
@@ -291,8 +292,10 @@ const isSafariBrowser = function() {
 const responsiveMenuBar = function(screenWidth) {
     const menuWeb = $('.penta-home__body-navbar')
     const menuMobile = $('.penta-home__body-navbar-mobile')
-    if(screenWidth <= 428) {
+    console.log(screenWidth)
+    if(screenWidth <= 768) {
         menuWeb.css({'display': 'none'})
+        menuMobile.css({'display': 'flex'})
     }
     else{
         menuMobile.css({'display': 'none'})
