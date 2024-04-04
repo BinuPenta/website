@@ -9,6 +9,7 @@ $(document).ready(function(){
     const midTextLayer = $('.mid-layer').find('.penta-home__body-text');
     const topLayer = $('.top-layer');
     const topTextLayer = $('.top-layer').find('.penta-home__body-text');
+    const serviceCardTextOverlay = $('.penta-service-overlay')
     // const productsSection = $('.penta-home__body-parallax-products')
     
 
@@ -23,7 +24,6 @@ $(document).ready(function(){
     const footerImg = $('.penta-home__body-parallax-footer-img img')
 
     productCarousel.owlCarousel({
- 
         navigation : false, // Show next and prev buttons
         loop:true,
         slideSpeed : 600,
@@ -37,35 +37,10 @@ $(document).ready(function(){
    
         autoplay:true,
         autoplayTimeout:4000,
-        // autoplayHoverPause:true
 
     });
-    // productCarousel.on('mousewheel', '.owl-stage', function (e) {
-    //     e.preventDefault();
-    //     if (e.deltaY>0) {
-    //         productCarousel.trigger('next.owl');
-    //     } else {
-    //         productCarousel.trigger('prev.owl');
-    //     }
-        
-    // });
-    
-    // Safari 3.0+ "[object HTMLElementConstructor]" 
-    // var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-    // console.log(isSafari)
-   
     var screenWidth =  $(window).width();
     responsiveMenuBar(screenWidth);
-
-    // $(window).resize(function() {
-    //     // This will execute whenever the window is resized
-    //     $(window).height(); // New height
-    //     screenWidth = $(window).width(); // New width
-    //     var footerResponsive =  responsiveScreenFooter(screenWidth);
-    //   });
-      
-    //  var footerResponsive =  responsiveScreenFooter(screenWidth);
-
     const moveLogo = function(){
         logoAlign()
         $('.penta-home__body-parallax-landinglogo img').css({
@@ -222,18 +197,12 @@ $(document).ready(function(){
         
 
     }
+    const eventServiceCard = () =>{
+        if(parallax.scrollTop() > 2000){
+            serviceCardTextOverlay.addClass('penta-service-card-show-text')
+        }
 
-    // const eventProductThemeToggle = () => {
-
-    //     var vh =  window.innerHeight
-    //     var screenMath = ((parallax.scrollTop()/ vh)).toFixed(2)
-    //     if(screenMath >= 3.70 && screenMath <= 3.90){
-    //         $(productBox).removeClass('transparentbg')
-    //     }
-    //     else{
-    //         $(productBox).addClass('transparentbg')
-    //     }
-    // }
+    }
 
     nextBtn.on('click', () => {
         if($(productBox[i]).hasClass('active')){
@@ -259,7 +228,7 @@ $(document).ready(function(){
         var footerResponsive =  responsiveScreenFooter(screenWidth);
         moveLogo();
         eventTextParallax()
-        // eventProductThemeToggle()
+        eventServiceCard()
         eventFooterParallax(footerResponsive)
     })
 })

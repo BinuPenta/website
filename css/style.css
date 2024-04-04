@@ -1,15 +1,12 @@
 @font-face {
-    font-family: gothambold;
-    src: url(../font/Gotham-Font/Gotham-Bold.otf);
+    font-family: space-grotesk-reg;
+    src: url(../font/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
 }
 @font-face {
-    font-family: gothamReg;
-    src: url(../font/Gotham-Font/GothamMedium.ttf);
+    font-family: space-grotesk-bold;
+    src: url(../font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
 }
-@font-face {
-    font-family: textfont;
-    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
-}
+
 html{
     scroll-behavior: smooth;
     overflow: hidden;
@@ -73,9 +70,6 @@ a{
 .penta-home__body-content{
     z-index: 1;
     position: relative;
-    /* overflow-y: auto;
-    overflow-x: hidden; */
-    /* height: 100vh; */
     overflow-y: hidden;
 }
 
@@ -83,7 +77,6 @@ a{
 .penta-home__body-header{
     position: fixed;
     right: 0;
-    /* width: 100%; */
     left: 0;
     z-index: 1;
     display: flex;
@@ -95,9 +88,7 @@ a{
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
-    /* justify-content: space-between; */
     width: 100%;
-    /* height: 200px; */
 }
 .penta-home__body-navbar-menu{
     width: 0;
@@ -123,7 +114,7 @@ a{
 .penta-home__body-navbar-menu ul li a{
     color: #ffffff;
     font-size: 20px;
-    font-family: textfont;
+    font-family: space-grotesk-reg;
  }
 
 .penta-home__body-navbar-hamburger{
@@ -190,7 +181,7 @@ a{
 .offcanvas-body ul li a{
     color: #000000;
     font-size: 20px;
-    font-family: textfont;
+    font-family: space-grotesk-reg;
 }
 
 #offcanvasRightLabel{
@@ -205,15 +196,12 @@ a{
     width: 60%;
     padding: 20px 65px 0;
     opacity: 0;
-    /* transition: all ease-in 0.3s; */
     transition: opacity ease-in-out 100ms, visibility 600ms;
 }
 
 /* ------------------ BODY -------------------- */
 .penta-home__body-content-body{
-    /* height: 100vh;
-    perspective: 300px;
-    overflow-y: auto; */
+
 }
 .penta-home__body-parallax-wrapper{
     height: 100vh;
@@ -222,22 +210,17 @@ a{
 }
 .penta-home__body-parallax-landinglogo{
     height: 100%;
-    /* position: sticky;
-    top: 0;
-    left: 0; */
 }
 
 .penta-home__body-parallax-landinglogo img{
     position: fixed;
     top: 10%;
     width: 32%;
-    /* left: -30px; */
     transform: translate(100%, 10%) scale(1);
     transition: opacity 600ms ease 0s;
 }
 .parallax-wrapper-group{
     position: relative;
-    /* height: 100vh; */
     transform-style: preserve-3d;
 }
 .penta-home__body-parallax-content{
@@ -255,7 +238,6 @@ a{
     height: 100vh;
     transition: opacity 600ms ease 0s;
     align-items: center;
-    /* padding: 10rem 0; */
 }
 .base-layer{
     transform: translateZ(-600px) scale(2);
@@ -274,10 +256,19 @@ a{
     width: 100%;
     transition: opacity 600ms ease 0s;
 }
+.penta-button-style{
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #7319fa96, #ff33b4b0, #ff7e29ba);
+    border-radius: 10px;
+    border: none;
+    font-family: space-grotesk-reg;
+}
 
 
 .penta-home__body-text-title{
-    font-family: textfont;
+    font-family: space-grotesk-bold;
     color: #ffffff;
     line-height: 90px;
     font-size: 80px;
@@ -288,7 +279,7 @@ a{
     font-weight: 800;
 }
 .penta-home__body-text-para{
-    font-family: textfont;
+    font-family: space-grotesk-reg;
     color: #ffffff;
     font-size: 20px;
     position: relative;
@@ -350,11 +341,11 @@ a{
  .penta-home__body-parallax-about-text-head{
     color: #ffffff;
     margin-bottom: 15px;
-    font-family: textfont;
+    font-family: space-grotesk-reg;
     font-size: 80px;
  }
  /* .penta-home__body-parallax-about-text a{
-    font-family: textfont;
+    font-family: space-grotesk-reg;
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -379,11 +370,11 @@ a{
     -webkit-text-fill-color: transparent;
 }
  .penta-home__body-parallax-about-text-head span{
-    font-family: gothambold;
+    font-family: space-grotesk-bold;
  }
  .penta-home__body-parallax-about-text p{
     color: #ffffff;
-    font-family: textfont;
+    font-family: space-grotesk-reg;
     word-spacing: 5px;
     font-size: 25px;
     margin-bottom: 20px;
@@ -391,265 +382,126 @@ a{
 
 
  /* Services */
-
  .penta-home__body-parallax-services {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    flex-wrap: nowrap;
-    /* max-width: 1200px; */
     z-index: 1;
-    margin: 0 20%;
+    margin: 5% 15%;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+ }
+ .penta-home__body-parallax-services-head h3{
+    transform: scale(-1);
+    float: right;
+ }
+ .vertical-text-orientation{
+    font-family: space-grotesk-bold;
+    font-size: 160px;
+    color: #fff;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    
  }
  .penta-home__body-parallax-services-cards{
     display: flex;
  }
- .penta-home__body-parallax-services-card {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    margin: 15px;
-    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    /* backdrop-filter: blur(2px); */
-
- }
- .penta-home__body-parallax-services-card-content{
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 0.5s;
- }
- .penta-home__body-parallax-services-card:hover .penta-home__body-parallax-services-card-content{
-    transform: translateY(0);
-    opacity: 1;
- }
- .penta-home__body-parallax-services-card-content h2{
-    font-family: gothambold;
-    position: absolute;
-    top: -30px;
-    right: 30px;
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
- }
- .penta-home__body-parallax-services-card-content h3{
-    font-family: gothambold;
-    font-size: 30px;
-    z-index: 1;
-    margin-bottom: 20px;
- }
- .penta-home__body-parallax-services-card-content p{
-    font-family: textfont;
-    font-weight: 300;
-    margin-bottom: 20px;
- }
- .penta-home__body-parallax-services-card-content a{
-    font-family: textfont;
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-top: 15px;
-    background: #ffffff;
-    color: #000000;
+.penta-home__body-parallax-services-cards-card-column{
+    padding: 0 15px;
+}
+.penta-services-card-column-2{
+    padding-top: 100px;
+}
+.penta-home__body-parallax-services-cards-column-card{
+    height: 400px;
+    width: 260px;
+    background-color: #231B3B;
     border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
- }
- .penta-home__body-parallax-services-card-icon{
-    position: absolute;
-    z-index: 0;
-    opacity: 1;
-    transition: 0.3s;
- }
- /* .penta-home__body-parallax-services-card-icon img{
-    width: 150px;
- } */
-.penta-home__body-parallax-services-card-icon i{
-    font-size: 8rem;
-    color: #7319fa;
-    /* background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    box-shadow: 0px 0px 3px 0px #fff;
 }
-.penta-home__body-parallax-services-card-icon i::before{
-    color: #7319fa;
-    background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.penta-home__body-parallax-services-cards-card-column-text{
+    text-align: right;
+    margin: 30px;
+    border-bottom: 3px solid #fff;
+    position: relative;
+    top: 15%;
 }
-.penta-home__body-parallax-services-card-icon i::after{
-    color: #7319fa;
-    background-image: -webkit-linear-gradient(45deg, #7319fa, #ff33b4, #ff7e29);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
- .penta-home__body-parallax-services-card:hover .penta-home__body-parallax-services-card-icon{
-    opacity: 0;
- }
 
 
+.penta-home__body-parallax-services-cards-card-column-text h3{
+    font-family: space-grotesk-bold;
+}
+.penta-home__body-parallax-services-cards-card-column-text p{
+    color: #fff;
+    font-family: space-grotesk-reg;
+}
+/* .penta-service-overlay{
+    height: 90%;
+    position: relative;
+    bottom: 300px;
+    background-color: #231B3B;
+    transition: width 2s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+.penta-service-card-show-text{
+    width: 0;
+} */
+/* 
+@keyframes slideOutLeft {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+ */
 
 
 
  /* Products */
 
  .penta-home__body-parallax-products{
+    margin: 5% 15%;
     position: relative;
-    width: 100%;
     height: 110vh;
-    margin: 5% 0;
     transition: all 1s linear;
  }
- #penta_home_products_carousel {
-    padding: 6% 0;
- }
-.penta-home__body-parallax-products-content{
-    width: 100%;
-    height: 100%;
-}
-.penta-home__body-parallax-products-content-box{
+.penta-home__body-parallax-products-section{
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
 }
-.penta-home__body-parallax-products-content-box-image img{
-    /* position: absolute;
-    top: 16%;
-    left: 10%;
-    width: 50%;
-    height: 80%;
-    object-fit: contain; */
-    /* opacity: 0;
-    transition: 0.5s; */
-    /* background-position: center; */
+.penta-home__body-parallax-products-section-items-row{
+    display: flex;
 }
-.penta-home__body-parallax-products-content-box.active{
-    opacity: 1;
-}
-
-.penta-home__body-parallax-products-controls{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-}
-.penta-home__body-parallax-products-controls-prev{
-    position: absolute;
-    left: 5rem;
-    bottom: 10rem;
-}
-.penta-home__body-parallax-products-controls-next{
-    position: absolute;
-    left: 110rem;
-    top: 25rem;
-}
-.penta-home__body-parallax-products-controls-prev i, .penta-home__body-parallax-products-controls-next i{
-    font-size: 50px;
-    color: #ffffff;
-}
-
-/* .pentaserve{
-    background-color: #deac4f;
-}
-.pentalearn{
-    background-color: #402952;
-}
-.acutestudy{
-    background-color: #1b90a7;
-} */
-.transparentbg{
-    background-color: transparent;
-}
-
-.penta-home__body-parallax-products-content-box-text{
-    color: #fff;
-    padding: 30px;
-    padding: 120px 70px;
-}
-.penta-home__body-parallax-products-content-box-image{
-    width: 75%;
-}
-
-.penta-home__body-parallax-products-content-box-text h2{
-    text-align: right;
-    /* opacity: 0.4; */
-    padding-bottom: 40px;
-    font-size: 28px;
-    font-family: gothambold;
-}
-.penta-home__body-parallax-products-content-box-text h2 span{
-    background: linear-gradient( 360deg, #e2272b 20%, #1f508a 20% 40%, #f9f9ed00 40% 60% );
-    background-size: 100% 500%;
-    background-position: top;
-    width: 100%;
-    color: #fff;
-    padding: 0 0.1rem;
-    transition: background-position 0.7s, color 0.5s;
-}
-.penta-home__body-parallax-products-content-box-text h1{
-    padding-bottom: 20px;
-    font-family: gothambold;
-}
-.penta-home__body-parallax-products-content-box-text p{
-    padding-bottom: 20px;
-    font-family: textfont;
-}
-.penta-home__body-parallax-products-content-box-text a{
-    font-family: textfont;
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-top: 15px;
-    background: #ffffff;
-    color: #000000;
+.penta-home__body-parallax-products-section-items-row-item{
+    background-color: #231B3B;
     border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
- }
-
- /* products animations */
- .owl-item.active h1, .owl-item.active h2, .owl-item.active p, .owl-item.active a{
-    animation: slideUp 1s linear forwards; 
-    transform: translateY(100%);
-    opacity: 0;
+    box-shadow: 0px 0px 3px 0px #fff;
+    padding: 50px;
+    margin: 10px;
 }
-
-
-@keyframes slideUp {
-    0%{transform: translateY(100%);opacity: 0;}
-    50%{transform: translateY(50%);opacity: 0.2;}
-    100%{transform: translateY(0%);opacity: 1;}
+.penta-home__body-parallax-products-section-items-row-item img{
+    width: 70%;
 }
-
-.owl-item.active .penta-home__body-parallax-products-content-box-text h2 span{
-    animation: SlideBgOnActive 1s linear forwards;
-    animation-delay: 1.8s;
+.penta-home__body-parallax-products-section-items-row-item h3{
+    font-family: space-grotesk-bold;
 }
-
-@keyframes SlideBgOnActive {
-    0%{background-position-y: 566%;padding:0 0.3rem;}
-    50%{background-position-y: 600%;padding:0 0.3rem;color:white}
-    100%{background-position-y: 600%;padding:0 0.3rem;color:white}
+.penta-home__body-parallax-products-section-items-row-item p{
+    color: #ffffff;
+    font-family: space-grotesk-reg;
 }
-
-
-
-
+.penta-home__body-parallax-products-section-items-row-item button{
+    
+}
+/* This style is because there is only three product items there are some codes to make this differernt from others above */
+.product-section-three-item-temp-div{
+    display: flex;
+}
+.product-section-three-item-temp-div-item{
+    width: 80%;
+}
 
 /* Contact  Form*/
 .penta-home__body-parallax-contact{
@@ -670,18 +522,18 @@ a{
 .penta-home__body-parallax-contact-container-label{
     padding-bottom: 10px;
     font-size: 28px;
-    font-family: gothambold;
+    font-family: space-grotesk-bold;
     opacity: 0.4;
 }
 .penta-home__body-parallax-contact-container-title{
     padding-bottom: 10px;
     font-size: 32px;
-    font-family: gothambold;
+    font-family: space-grotesk-bold;
 }
 .penta-home__body-parallax-contact-container-desc{
     padding-bottom: 10px;
     font-size: 28px;
-    font-family: textfont;
+    font-family: space-grotesk-reg;
 }
 
 .penta-home__body-parallax-contact-form{
@@ -692,10 +544,10 @@ a{
     justify-content: center;
 }
 .penta-home__body-parallax-contact-form form{
-    background-color: #000;
+    /* background-color: #000; */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px 10px #3e2452;
+    /* box-shadow: 0px 0px 15px 5px #3e2452; */
 }
 
 .penta-home__body-parallax-contact-form-row{
@@ -719,7 +571,7 @@ a{
 .penta-home__body-parallax-contact-form-row-label{
     position: relative;
     font-size: 18px;
-    font-family: textfont;    
+    font-family: space-grotesk-reg;    
     padding-bottom: 4px;
     color: #fff;
 }
@@ -731,18 +583,7 @@ a{
     border-bottom: 1px solid #ffffff;
 }
 .penta-home__body-parallax-contact-form-action{
-    font-family: textfont;
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    margin-top: 15px;
-    border: none;
-    background: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0px 10px 12px rgb(61 35 81);
+    width: 200px;
 }
 
 /* Footer */
@@ -757,31 +598,61 @@ a{
     transform: translate(0%, 50%);
     transition: transform 2s ease-out;
 }
-.penta-home__body-parallax-footer-info {
+.penta-home__body-parallax-footer-content{
     position: absolute;
     width: 100%;
-    top: 47%;
+    top: 48%;
+    /* background-color: #00000069; */
+    padding: 80px 0;
+}
+.penta-home__body-parallax-footer-content-info {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #00000069;
-    padding: 80px 0;
 }
-.penta-home__body-parallax-footer-info-details{
+.penta-home__body-parallax-footer-content-info-details{
     color: #ffffff;
 }
-.penta-home__body-parallax-footer-info-details h3{
-    font-family: textfont;
+.penta-home__body-parallax-footer-content-info-details h3{
+    font-family: space-grotesk-reg;
     font-size: 30px;
     margin-bottom: 10px;
 }
-.penta-home__body-parallax-footer-info-details ul li{
-    font-family: textfont;
+.penta-home__body-parallax-footer-content-info-details ul li{
+    font-family: space-grotesk-reg;
     font-size: 20px;
     margin-bottom: 5px;
 }
-.penta-home__body-parallax-footer-info-details ul {
+.penta-home__body-parallax-footer-content-info-details ul {
     padding-left: 0;
+}
+.penta-home__body-parallax-footer-content-badge{
+    text-align: center;
+}
+.penta-home__body-parallax-footer-content-badge{
+    text-align: center;
+}
+.cyber-essentials{
+    border: none;
+    height:120px; 
+    width:100px;
+}
+.penta-home__body-parallax-footer-content-copyright{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20px;
+}
+#overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000069;
+    z-index: 0;
 }
 
 
@@ -792,6 +663,11 @@ a{
         left: 50px;
     }
 }
+@media(max-width: 1920px) {
+    .penta-home__body-parallax-footer-content {
+        top: 35%;
+    }
+}
 @media(max-width: 1770px) {
     .penta-home__body-text {
         padding: 380px 70px;
@@ -800,15 +676,19 @@ a{
         line-height: 80px;
         font-size: 65px;
     }
-    .penta-home__body-parallax-products-controls-next {
-        left: 90rem;
-    }
     .penta-home__body-parallax-content {
         margin: 0 6%;
     }
+    .penta-home__body-parallax-footer-content {
+        top: 20%;
+    }
+    
 }
 
 @media(max-width: 1440px) {
+    .penta-home__body-header-logo img {
+        width: 70%;
+    }    
     .penta-home__body-text {
         padding: 350px 0px;
     }
@@ -818,14 +698,11 @@ a{
     .penta-home__body-image img {
         left: 10%;
     }
-    .penta-home__body-parallax-services-card {
-        height: 340px;
-    }
-    .penta-home__body-parallax-products-controls-next {
-        left: 82rem;
-    }
     .parallax-wrapper-group {
         height: 100vh;
+    }
+    .penta-home__body-parallax-services{
+        height: 180vh;
     }
     .penta-home__body-parallax-content {
         height: 120vh;
@@ -834,8 +711,86 @@ a{
         position: relative;
         top: 30%;
     }
+    .penta-home__body-parallax-footer-content {
+        top: 40%;
+        padding: 45px 0;
+    }
+    .cyber-essentials{
+        height: 86px;
+        width: 70px;
+    }
 }
-
+@media (max-width: 1300px){
+    .penta-home__body-parallax-footer-img {
+        top: 35%;
+    }
+}
+@media (max-width: 1200px){
+    .penta-home__body-image img {
+        width: 90%;
+    }
+    .top-layer .penta-home__body-image img{
+        width: 72%;
+        left: 8px;
+    }
+    .top-layer .penta-home__body-image {
+        left: 40px;
+    }
+    .penta-home__body-image img {
+        left: 0%;
+    }
+    .penta-home__body-header-logo img {
+        width: 100%;
+    }
+    .penta-home__body-parallax-about-text p {
+        font-size: 20px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text p {
+        font-size: 15px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text h3 {
+        font-size: 22px;
+    }
+    .penta-home__body-parallax-services-cards-column-card {
+        height: 360px;
+    }
+    .penta-home__body-parallax-products-section-items-row-item img {
+        width: 100%;
+    }
+    .penta-home__body-parallax-products-section-items-row-item h3 {
+        font-size: 22px;
+    }
+    .penta-home__body-parallax-products-section-items-row-item p {
+        font-size: 12px;
+    }
+    .penta-home__body-parallax-products-section-items-row-item button {
+        font-size: 12px;
+        width: 100px;
+        height: 35px;
+    }
+    .penta-home__body-parallax-contact-container-desc {
+        font-size: 22px;
+    }
+    .penta-home__body-parallax-footer-content-info-details ul li {
+        font-size: 16px;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 38%;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 48%;
+        padding: 30px 0;
+    }
+}
+@media(max-width: 1100px){
+    .top-layer .penta-home__body-image {
+        left: 25px;
+    }    
+    .top-layer .penta-home__body-image img {
+        left: 4%;
+    }
+    
+}
 @media(max-width: 1024px) {
     .penta-home__body-header-logo img {
         padding: 20px 40px 0;
@@ -844,15 +799,11 @@ a{
         font-size: 66px;
         line-height: 70px;
     }
-    .penta-home__body-image img {
-        width: 90%;
-    }
+
     .top-layer .penta-home__body-image img{
-        width: 76%;
+        left: 15px;
     }
-    .top-layer .penta-home__body-image {
-        left: 20px;
-    }
+
     .penta-home__body-parallax-about-text-head {
         font-size: 60px;
     }
@@ -865,39 +816,22 @@ a{
     .penta-home__body-parallax-services {
         margin: 0 10%;
     }
-    .penta-home__body-parallax-services-card-content h3 {
-        font-size: 25px;
-    }
-    .penta-home__body-parallax-services-card-content p {
-        font-size: 12px;
-    }
     .penta-home__body-parallax-products {
-        top: 35%;
+        padding: 5% 0;
     }
-    .penta-home__body-parallax-products-content-box-image{
-        width: 100%;
-        height: 100%;
+    .penta-home__body-parallax-products-section-items-row-item {
+        padding: 20px;
     }
-    .penta-home__body-parallax-products-content-box-text {
-        padding: 25px;
-        top: 40%;
-        left: 60%;    
+    #pentaserve_element{
+        width: 50%;
     }
-    .penta-home__body-parallax-products-content-box-text p {
-        font-size: 15px;
+    #acutestudy_element{
+        width: 50%;
     }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 12px;
-        padding: 8px 20px;
+    .vertical-text-orientation {
+        font-size: 130px;
     }
-    .penta-home__body-parallax-products-content-box-image img {
-        width: 45%;
-        height: 70%;
-    }
-    .penta-home__body-parallax-products-controls-next {
-        top: 18rem;
-        left: 57rem;
-    }
+
     .penta-home__body-parallax-contact-container-desc {
         font-size: 20px;
     }
@@ -911,11 +845,82 @@ a{
         top: 70%;
         padding: 40px 0;
     }
-    .penta-home__body-parallax-footer-info-details h3 {
-        font-size: 25px;
+    .penta-home__body-parallax-footer-content-info-details h3 {
+        font-size: 24px;
     }
-    .penta-home__body-parallax-footer-info-details ul li {
+    .penta-home__body-parallax-footer-content-info-details ul li {
+        font-size: 14px;
+    }
+    .cyber-essentials {
+        height: 60px;
+        width: 50px;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 60%;
+        padding: 0;
+    }
+    .penta-home__body-parallax-footer-content-copyright {
+        padding-top: 10px;
+        font-size: 10px;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 68%;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 77%;
+    }
+}
+@media(max-width: 960px){
+    .penta-home__body-text-title {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    .top-layer .penta-home__body-image img {
+        left: 10px;
+        width: 68%;
+    }
+    .penta-home__body-image img {
+        width: 85%;
+    }
+}
+@media(max-width: 820px){
+    .top-layer .penta-home__body-image {
+        bottom: 26px;
+    }
+    .top-layer .penta-home__body-image img {
+        left: 6px;
+        
+    }
+    .penta-home__body-parallax-about-text-head {
+        margin-bottom: 5px;
+        font-size: 50px;
+    }
+    .penta-home__body-parallax-about-text p {
         font-size: 15px;
+    }
+    .vertical-text-orientation {
+        font-size: 110px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text p {
+        font-size: 14px;
+    }
+    .penta-home__body-parallax-services-cards-column-card {
+        width: 220px;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 60%;
+    }
+    .penta-home__body-parallax-contact-form-row-label {
+        font-size: 15px;
+    }
+    .penta-home__body-parallax-contact-container-desc {
+        font-size: 15px;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 74%;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 70%;
     }
 }
 
@@ -926,11 +931,13 @@ a{
     .penta-home__body-text {
         padding: 325px 0px;
     }
-    .top-layer .penta-home__body-image {
-        left: 30px;
+    .penta-home__body-image img {
+        width: 80%;
     }
     .top-layer .penta-home__body-image img {
-        width: 72%;
+        width: 64%;
+        top: 12px;
+        left: 2px;    
     }
     .penta-home__body-text-title {
         font-size: 44px;
@@ -948,53 +955,140 @@ a{
     .penta-home__body-parallax-about-text p {
         font-size: 15px;
     }
-    .penta-home__body-parallax-services-card {
-        height: 300px;
+    .penta-home__body-parallax-services {
+        margin: 0 8%;
     }
-    .penta-home__body-parallax-services-card-content h2 {
-        top: -25px;
-        right: 10px;
-        font-size: 20px;
+    .penta-home__body-parallax-footer-content {
+        top: 70%;
     }
-    .penta-home__body-parallax-services-card-content h3 {
-        font-size: 20px;
-    }
-    .penta-home__body-parallax-services-card-content p {
-        font-size: 10px;
-    }
-    .penta-home__body-parallax-services-card-content a {
-        font-size: 10px;
-        padding: 6px 15px;
-    }
-    .penta-home__body-parallax-products-content-box-text {
-        padding: 25px;
-        top: 40%;
-        left: 58%;
-    }
-    .penta-home__body-parallax-products-content-box-text h2 {
-        padding-bottom: 25px;
-        font-size: 22px;
-    }
-    .penta-home__body-parallax-products-content-box-text h1 {
-        padding-bottom: 15px;
-        font-size: 25px;
-    }
-    .penta-home__body-parallax-products-content-box-text p {
-        font-size: 12px;
-        padding-bottom: 20px;
-    }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 10px;
-        padding: 6px 15px;
-    }
-    .penta-home__body-parallax-products-content-box-image img {
-        width: 50%;
-    }
-    .penta-home__body-parallax-products-controls-next {
-        top: 15rem;
-        left: 40rem;
+    .penta-home__body-parallax-footer-img {
+        top: 68%;
     }
     
+}
+@media(max-width: 670px){
+    .penta-home__body-header-logo {
+        width: 75%;
+    }
+    .penta-home__body-header-logo img {
+        width: 100%;
+    }
+    .top-layer .penta-home__body-image {
+        left: 22px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+        top: 12px;
+        left: 0px;
+    }
+    .penta-home__body-image img {
+        width: 75%;
+    }
+    .penta-home__body-text-title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .vertical-text-orientation {
+        font-size: 80px;
+    }
+    .penta-home__body-parallax-services-cards-column-card {
+        width: 200px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text {
+        margin: 20px;
+    }
+    .penta-home__body-parallax-products {
+        margin: 5% 10%;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 67%;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 65%;
+    }
+    .penta-home__body-parallax-footer-content-info-details h3 {
+        font-size: 22px;
+    }
+    .penta-home__body-parallax-footer-content-info-details ul li {
+        font-size: 12px;
+    }
+    .cyber-essentials {
+        height: 50px;
+        width: 40px;
+    }
+    .penta-home__body-parallax-contact {
+        margin: 5%;
+    }
+}
+@media(max-width: 510px){
+    .penta-home__body-header-logo {
+        width: 100%;
+    }
+    .penta-home__body-text-title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .top-layer .penta-home__body-image {
+        left: 17px;
+    }
+    .penta-home__body-parallax-about-text-head {
+        font-size: 40px;
+    }
+    .penta-home__body-parallax-about-text p {
+        font-size: 12px;
+    }
+    .penta-button-style {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .penta-home__body-parallax-services-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-services {
+        height: 300vh;
+    }
+    .penta-services-card-column-2 {
+        padding-top: 0;
+    }
+    .penta-home__body-parallax-services {
+        align-items: flex-start;
+    }
+    .penta-home__body-parallax-products-section-items-row {
+        flex-direction: column;
+    }
+    #pentaserve_element {
+        width: 94%;
+    }
+    #acutestudy_element {
+        width: 94%;
+    }
+    .product-section-three-item-temp-div {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+    }
+    .penta-home__body-parallax-products {
+        height: 150vh;
+    }
+    .product-section-three-item-temp-div-item {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 74%;
+    }
+    .penta-home__body-image {
+        left: 25px;
+    }
+}
+@media(max-width: 470px){
+    .top-layer .penta-home__body-image {
+        left: 40px;
+    }
+    .penta-home__body-parallax-about-text-head {
+        font-size: 35px;
+    }
 }
 @media(max-width: 428px) {
     .penta-home__body-parallax-footer-img img {
@@ -1003,23 +1097,21 @@ a{
     .penta-home__body-parallax-footer-img {
         top: 68%;
     }
-    .penta-home__body-parallax-products-content-box {
-        flex-direction: column-reverse;
-    }
     .penta-home__body-parallax-products {
         top: 0%;
-        margin: 0;
-    }
-    #penta_home_products_carousel {
-        padding: 6% 0;
-        position: relative;
-        top: 20%;
-        height: fit-content;
+        margin: 0 5%;
     }
 }
 @media(max-width: 425px){
     .penta-home__body-header-logo {
         width: 90%;
+    }
+    .penta-home__body-text-title {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .top-layer .penta-home__body-image img {
+        left: 20px;
     }
     .penta-home__body-parallax-content {
         height: 120vh;
@@ -1077,56 +1169,6 @@ a{
         flex-direction: column;
         align-items: center;
     }
-    .penta-home__body-parallax-services-card {
-        width: 70%;
-    }
-    .penta-home__body-parallax-services-card-icon i {
-        font-size: 6rem;
-    }
-    /* .penta-home__body-parallax-products {
-        height: 150vh; 
-    } */
-    .penta-home__body-parallax-products-content-box-text {
-        top: 60%;
-        left: 18%;
-        width: 50%;
-    }
-    .penta-home__body-parallax-products-content-box-image img {
-        height: auto;
-        top: 30%;
-        width: 80%;
-    }
-    .penta-home__body-parallax-products-content-box-text h2 {
-        padding-bottom: 25px;
-        font-size: 20px;
-    }
-
-    .penta-home__body-parallax-products-content-box-text h1 {
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-    .penta-home__body-parallax-products-content-box-text p {
-        font-size: 10px;
-        padding-bottom: 5px;
-    }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 10px;
-        padding: 6px 15px;
-    }
-    .penta-home__body-parallax-products-controls-prev i, .penta-home__body-parallax-products-controls-next i {
-        font-size: 27px;
-    }
-    .penta-home__body-parallax-products-controls-prev {
-        left: 2rem;
-    }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 8px;
-        padding: 5px 10px;
-    }
-    .penta-home__body-parallax-products-controls-next {
-        top: 19rem;
-        left: 23rem;
-    }
     .penta-home__body-parallax-contact {
         flex-direction: column;
         justify-content: center;
@@ -1141,7 +1183,7 @@ a{
         font-size: 20px;
     }
     .penta-home__body-parallax-footer-info-details ul li {
-        font-family: textfont;
+        font-family: space-grotesk-reg;
         font-size: 10px;
         margin-bottom: 2px;
     }
@@ -1162,6 +1204,15 @@ a{
         top: 77%;
         padding: 18px 0;
     }
+
+    .penta-home__body-parallax-footer-content-info {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 36%;
+        padding: 5%;
+    }
+
 }
 @media(max-width: 412px){
     .penta-home__body-parallax-footer-info {
@@ -1192,9 +1243,6 @@ a{
     
 }
 @media (max-width: 375px){
-    .penta-home__body-parallax-products-controls-next {
-        left: 20rem;
-    }
     .penta-home__body-text-title {
         font-size: 18px;
         line-height: 22px;
@@ -1202,16 +1250,28 @@ a{
     .penta-home__body-parallax-footer-img {
         top: 65%;
     }
+    .penta-home__body-parallax-footer-img {
+        top: 68%;
+    }
 }
 @media(max-width: 320px){
-    .penta-home__body-parallax-products-controls-next {
-        left: 17rem;
-    }
     .top-layer .penta-home__body-image {
         left: 13px;
     }
     .penta-home__body-parallax-footer-img {
         top: 70%;
+    }
+    .vertical-text-orientation {
+        font-size: 60px;
+    }
+    .penta-home__body-parallax-services-cards-column-card {
+        width: 195px;
+    }
+    .penta-home__body-parallax-services-cards-card-column {
+        padding: 0;
+    }
+    .penta-home__body-parallax-footer-content-copyright {
+        padding-top: 0;
     }
 }
 
@@ -1223,9 +1283,10 @@ a{
         line-height: 19px;
     }
    
-    /* .top-layer .penta-home__body-image {
-        padding-left: 0px;
-    } */
+    .top-layer .penta-home__body-image img {
+        left: 22px;
+        top: 3px;
+    }
     .penta-home__body-text {
         padding: 130px 0px;
     }
@@ -1241,18 +1302,230 @@ a{
     .top-layer .penta-home__body-image {
         bottom: 12px;
     }
-    /* .penta-home__body-parallax-footer-img {
-        top: 56%;
-    } */
+    .penta-home__body-parallax-services {
+        height: 390vh;
+    }
+    .penta-home__body-parallax-products {
+        height: 220vh;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 31%;
+    }
+    .penta-home__body-parallax-footer-content-info-details h3 {
+        font-size: 16px;
+    }
+    .penta-home__body-parallax-footer-content-info-details ul li {
+        font-size: 8px;
+    }
+    .cyber-essentials {
+        height: 60px;
+        width: 40px;
+    }
+    .penta-home__body-parallax-footer-content-copyright {
+        font-size: 6px;
+    }
+    .penta-home__body-parallax-services-cards-column-card {
+        height: 300px;
+        width: 180px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text p {
+        font-size: 12px;
+    }
+    .penta-home__body-parallax-services-cards-card-column-text h3 {
+        font-size: 18px;
+    }
+    .penta-home__body-parallax-products-section-items-row-item h3 {
+        font-size: 18px;
+    }
+    .penta-home__body-parallax-contact-container-label {
+        font-size: 18px;
+    }
+    .penta-home__body-parallax-contact-container-title {
+        font-size: 20px;
+    }
+    .penta-home__body-parallax-contact-form-row-label {
+        font-size: 12px;
+    }
+    .penta-button-style {
+        font-size: 10px;
+        border-radius: 5px;
+    }
+    .penta-home__body-parallax-products-section-items-row-item button {
+        font-size: 10px;
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 20%;
+    }
+    .panta-home__body-navbar-mobile-logo_alpha {
+        width: 60%;
+    }
+    .offcanvas{
+        width: 200px;
+    }
+    .offcanvas-body ul li a {
+        font-size: 14px;
+    }
+    .penta-home__body-navbar-mobile-hamburger-bar {
+        width: 20px;
+        height: 1px;
+    }
 }
-@media (max-width: 375px) and (max-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
+/* @media (max-width: 375px) and (max-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
     .penta-home__body-parallax-footer-img {
         top: 63%;
     }
     .penta-home__body-parallax-footer-info {
         top: 76%;
     }
+} */
+
+
+@media (max-width: 430px) and (max-height: 932px) { 
+    .top-layer .penta-home__body-image {
+        left: 37px;
+    }
+    .top-layer .penta-home__body-image img {
+        top: 22px;
+    }
+    .penta-home__body-parallax-about {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact-container {
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 45%;
+        padding: 0 20px;
+    }
+    .penta-home__body-parallax-footer-content-info {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 80%;
+    }
 }
+
+@media (max-width: 414px) and (max-height: 896px){
+    .top-layer .penta-home__body-image img {
+        top: 6px;
+        left: 0px;
+    }
+
+    .penta-home__body-parallax-footer-content {
+        top: 44%;
+    }    
+    .penta-home__body-parallax-footer-img {
+        top: 70%;
+    } 
+}
+@media (max-width: 412px) and (max-height: 915px){
+    .top-layer .penta-home__body-image img {
+        top: 6px;
+        left: 2px;
+        width: 60%;
+    }
+    .penta-home__body-text-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 70%;
+    } 
+}
+@media (max-width: 390px) and (max-height: 844px) { 
+    .top-layer .penta-home__body-image img {
+        top: 6px;
+        left: 0;
+    }
+    .penta-home__body-parallax-about {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact-container {
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 40%;
+        padding: 0 20px;
+    }
+    .penta-home__body-parallax-footer-content-info {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 74%;
+    }
+
+}
+@media (max-width: 375px) and (max-height: 667px){
+    .top-layer .penta-home__body-image img {
+        top: 6px;
+        left: 0px;
+    }
+    .penta-home__body-text-title {
+        font-size: 25px;
+        line-height: 28px;
+    }
+    /* .penta-home__body-parallax-footer-content {
+        top: 44%;
+    }
+    .penta-home__body-parallax-footer-img {
+        top: 70%;
+    }    */
+    /* .top-layer .penta-home__body-image img {
+        top: 6px;
+        left: 0;
+    } */
+
+    .penta-home__body-text-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .penta-home__body-parallax-services {
+        height: 360vh;
+    }
+    .penta-home__body-parallax-products {
+        height: 170vh;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 25%;
+    }    
+    .penta-home__body-parallax-footer-img {
+        top: 62%;
+    } 
+}
+@media (max-width: 360px) and (max-height: 740px){
+    .top-layer .penta-home__body-image {
+        left: 29px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 62%;
+    }
+    .penta-home__body-parallax-services {
+        height: 320vh;
+    }
+    .vertical-text-orientation {
+        font-size: 60px;
+    }
+    .penta-home__body-parallax-footer-content {
+        top: 32%;
+    }
+}
+
+
 
 @media (max-width: 414px) and (max-height: 736px) and (-webkit-device-pixel-ratio: 3) {
     .penta-home__body-text {
@@ -1270,9 +1543,6 @@ a{
     .penta-home__body-parallax-footer-info {
         top: 76%;
     }
-    /* .penta-home__body-parallax-footer-img {
-        top: 58%;
-    } */
         
  }
  @media (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3) { 
@@ -1301,50 +1571,6 @@ a{
         flex-direction: column;
         align-items: center;
     }
-    .penta-home__body-parallax-services-card{
-        width: 80%;
-    }
-    .penta-home__body-parallax-products-content-box-text {
-        top: 60%;
-        left: 18%;
-        width: 50%;
-    }
-    .penta-home__body-parallax-products-content-box-image img {
-        height: auto;
-        top: 30%;
-        width: 80%;
-    }
-    .penta-home__body-parallax-products-content-box-text h2 {
-        padding-bottom: 25px;
-        font-size: 20px;
-    }
-
-    .penta-home__body-parallax-products-content-box-text h1 {
-        padding-bottom: 10px;
-        font-size: 20px;
-    }
-    .penta-home__body-parallax-products-content-box-text p {
-        font-size: 10px;
-        padding-bottom: 5px;
-    }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 10px;
-        padding: 6px 15px;
-    }
-    .penta-home__body-parallax-products-controls-prev i, .penta-home__body-parallax-products-controls-next i {
-        font-size: 35px;
-    }
-    .penta-home__body-parallax-products-controls-prev {
-        left: 2rem;
-    }
-    .penta-home__body-parallax-products-content-box-text a {
-        font-size: 8px;
-        padding: 5px 10px;
-    }
-    .penta-home__body-parallax-products-controls-next {
-        top: 22rem;
-        left: 20rem;
-    }
     .penta-home__body-parallax-contact {
         flex-direction: column;
         justify-content: center;
@@ -1359,7 +1585,7 @@ a{
         font-size: 20px;
     }
     .penta-home__body-parallax-footer-info-details ul li {
-        font-family: textfont;
+        font-family: space-grotesk-reg;
         font-size: 10px;
         margin-bottom: 2px;
     }
@@ -1380,7 +1606,4 @@ a{
         top: 71%;
         padding: 10px 0;
     }
-    /* .penta-home__body-parallax-footer-img {
-        top: 48%;
-    } */
  }
