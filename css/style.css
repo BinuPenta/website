@@ -792,6 +792,10 @@ a{
     
 }
 @media(max-width: 1024px) {
+    .parallax-wrapper-group {
+        height: 100%;
+    }
+    
     .penta-home__body-header-logo img {
         padding: 20px 40px 0;
     }
@@ -871,6 +875,9 @@ a{
     }
 }
 @media(max-width: 960px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-text-title {
         font-size: 52px;
         line-height: 60px;
@@ -925,6 +932,9 @@ a{
 }
 
 @media(max-width: 768px) {
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-header-logo img {
         width: 90%;
     }
@@ -967,6 +977,9 @@ a{
     
 }
 @media(max-width: 670px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-header-logo {
         width: 75%;
     }
@@ -1021,6 +1034,9 @@ a{
     }
 }
 @media(max-width: 510px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-header-logo {
         width: 100%;
     }
@@ -1083,6 +1099,9 @@ a{
     }
 }
 @media(max-width: 470px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image {
         left: 40px;
     }
@@ -1091,6 +1110,9 @@ a{
     }
 }
 @media(max-width: 428px) {
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-parallax-footer-img img {
         transform: translate(0%, 0%);
     }    
@@ -1103,6 +1125,9 @@ a{
     }
 }
 @media(max-width: 425px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-header-logo {
         width: 90%;
     }
@@ -1215,6 +1240,9 @@ a{
 
 }
 @media(max-width: 412px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-parallax-footer-info {
         top: 75%;
     }
@@ -1243,6 +1271,9 @@ a{
     
 }
 @media (max-width: 375px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-text-title {
         font-size: 18px;
         line-height: 22px;
@@ -1255,6 +1286,9 @@ a{
     }
 }
 @media(max-width: 320px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image {
         left: 13px;
     }
@@ -1278,6 +1312,9 @@ a{
 /* Media query for iphones  */
 
 @media (max-width: 320px) and (max-height: 568px) and (-webkit-device-pixel-ratio: 2) { 
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-text-title {
         font-size: 17px;
         line-height: 19px;
@@ -1384,6 +1421,9 @@ a{
 
 
 @media (max-width: 430px) and (max-height: 932px) { 
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image {
         left: 37px;
     }
@@ -1415,6 +1455,9 @@ a{
 }
 
 @media (max-width: 414px) and (max-height: 896px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image img {
         top: 6px;
         left: 0px;
@@ -1428,6 +1471,9 @@ a{
     } 
 }
 @media (max-width: 412px) and (max-height: 915px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image img {
         top: 6px;
         left: 2px;
@@ -1442,6 +1488,9 @@ a{
     } 
 }
 @media (max-width: 390px) and (max-height: 844px) { 
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image img {
         top: 6px;
         left: 0;
@@ -1471,6 +1520,9 @@ a{
 
 }
 @media (max-width: 375px) and (max-height: 667px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image img {
         top: 6px;
         left: 0px;
@@ -1508,6 +1560,9 @@ a{
     } 
 }
 @media (max-width: 360px) and (max-height: 740px){
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .top-layer .penta-home__body-image {
         left: 29px;
     }
@@ -1528,6 +1583,9 @@ a{
 
 
 @media (max-width: 414px) and (max-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-text {
         padding: 160px 0px;
     }
@@ -1546,6 +1604,9 @@ a{
         
  }
  @media (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3) { 
+    .parallax-wrapper-group {
+        height: 100%;
+    }
     .penta-home__body-text {
         padding: 170px 0px;
     }
