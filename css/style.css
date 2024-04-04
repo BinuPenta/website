@@ -1485,7 +1485,14 @@ a{
     }
     .penta-home__body-parallax-footer-img {
         top: 70%;
-    } 
+    }
+    /* experiment */
+    .penta-home__body-parallax-products {
+        height: 130%;
+    }
+    .penta-home__body-parallax-services{
+        height: 270%;
+    }
 }
 @media (max-width: 390px) and (max-height: 844px) { 
     .parallax-wrapper-group {
