@@ -1539,6 +1539,21 @@ a{
 
 
 }
+@media(max-width: 390px) and (max-height: 763px){
+    .top-layer .penta-home__body-image {
+        left: 50px;
+        bottom: 10px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+        top: 0px;
+        left: 0px;
+    }
+    .penta-home__body-parallax-services {
+        height: 350dvh;
+    }
+    
+}
 @media(max-width: 390px) and (max-height: 664px){
     .top-layer .penta-home__body-image img {
         top: 23px;
