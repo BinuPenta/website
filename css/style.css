@@ -1460,6 +1460,9 @@ a{
 
 }
 @media(max-width: 430px){
+    .penta-home__body-text-title {
+        font-size: 26px;
+    }
     .top-layer .penta-home__body-image {
         bottom: 12px;
     }
