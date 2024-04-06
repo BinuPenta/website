@@ -594,7 +594,7 @@ a{
 .penta-home__body-parallax-footer-img{
     background-image: url('../assets/footer.png');
     background-repeat: no-repeat;
-    width: 100dvw;
+    /* width: 100dvw; */
     height: 100dvh;
     background-size: contain;
     background-position-y: bottom;
@@ -646,6 +646,7 @@ a{
     width:100px;
 }
 .penta-home__body-parallax-footer-content-copyright{
+    font-family: space-grotesk-reg;
     text-align: center;
     color: #ffffff;
     padding-top: 20px;
@@ -1290,21 +1291,12 @@ a{
         font-size: 18px;
         line-height: 22px;
     }
-    /* .penta-home__body-parallax-footer-img {
-        top: 65%;
-    }
-    .penta-home__body-parallax-footer-img {
-        top: 68%;
-    } */
 }
 @media(max-width: 320px){
 
     .top-layer .penta-home__body-image {
         left: 13px;
     }
-    /* .penta-home__body-parallax-footer-img {
-        top: 70%;
-    } */
     .vertical-text-orientation {
         font-size: 60px;
     }
@@ -1460,6 +1452,9 @@ a{
 
 }
 @media(max-width: 430px){
+    .penta-home__body-header-logo img {
+        padding: 20px 15px 0;
+    }
     .penta-home__body-text-title {
         font-size: 26px;
     }

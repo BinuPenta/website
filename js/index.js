@@ -9,36 +9,9 @@ $(document).ready(function(){
     const midTextLayer = $('.mid-layer').find('.penta-home__body-text');
     const topLayer = $('.top-layer');
     const topTextLayer = $('.top-layer').find('.penta-home__body-text');
-    const serviceCardTextOverlay = $('.penta-service-overlay')
-    // const productsSection = $('.penta-home__body-parallax-products')
-    
 
-    // products
-    const productCarousel = $('#penta_home_products_carousel')
-    const productBox = $('.penta-home__body-parallax-products-content-box')
-    const prevBtn = $('.penta-home__body-parallax-products-controls-prev')
-    const nextBtn = $('.penta-home__body-parallax-products-controls-next')
-    var i = 0;
-
-    // footer
     const footerImg = $('.penta-home__body-parallax-footer-img img')
 
-    productCarousel.owlCarousel({
-        navigation : false, // Show next and prev buttons
-        loop:true,
-        slideSpeed : 600,
-        paginationSpeed : 600,
-   
-        items : 1, 
-        itemsDesktop : false,
-        itemsDesktopSmall : false,
-        itemsTablet: false,
-        itemsMobile : false,
-   
-        autoplay:true,
-        autoplayTimeout:4000,
-
-    });
     var screenWidth =  $(window).width();
     responsiveMenuBar(screenWidth);
     const moveLogo = function(){
@@ -148,13 +121,6 @@ $(document).ready(function(){
         navMenu.toggleClass("active");
         if(navMenu.hasClass("active")){
             navMenu[0].style.width = "100%"
-            // if(screenWidth <= 425){
-            //     navMenu[0].style.width = "100%"
-            // }
-            // else{
-            //     navMenu[0].style.width = "100%"
-            // }
-            
         }
         else{
             navMenu[0].style.width = "0";
@@ -170,9 +136,6 @@ $(document).ready(function(){
     )
 
     const eventFooterParallax = (footerResponsive) => {
-        console.log(screenWidth)
-        console.log(parallax.scrollTop())
-        console.log(footerResponsive)
        if(parallax.scrollTop() >= footerResponsive){
         $(footerImg).css({
             'opacity': 1,
@@ -197,28 +160,7 @@ $(document).ready(function(){
         
 
     }
-    const eventServiceCard = () =>{
-        if(parallax.scrollTop() > 2000){
-            serviceCardTextOverlay.addClass('penta-service-card-show-text')
-        }
-
-    }
-
-    nextBtn.on('click', () => {
-        if($(productBox[i]).hasClass('active')){
-            $(productBox[i]).removeClass('active');
-            i = (i+1)% $(productBox).length
-            $(productBox[i]).addClass('active');
-        }
-
-    })    
-    prevBtn.on('click', () => {
-        if($(productBox[i]).hasClass('active')){
-            $(productBox[i]).removeClass('active');
-            i = (i-1 + $(productBox).length)% $(productBox).length
-            $(productBox[i]).addClass('active');
-        }
-    })   
+     
 
     parallax.on('scroll mousewheel', function(event) {
         $('html, body').animate({
@@ -228,7 +170,6 @@ $(document).ready(function(){
         var footerResponsive =  responsiveScreenFooter(screenWidth);
         moveLogo();
         eventTextParallax()
-        eventServiceCard()
         eventFooterParallax(footerResponsive)
     })
 })

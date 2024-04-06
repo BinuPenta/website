@@ -1,0 +1,212 @@
+@font-face {
+    font-family: space-grotesk-reg;
+    src: url(../font/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
+}
+@font-face {
+    font-family: space-grotesk-bold;
+    src: url(../font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
+}
+.penta-contact__body-header-logo{
+    width: 60%;
+}
+.penta-contact__body-header-logo img{
+    width: 60%;
+    padding: 20px 65px 0;
+}
+.penta-contact__body-parallax-wrapper{
+    height: 100dvh;
+    perspective: 600px;
+    overflow-y: auto;
+}
+.penta-contact__body-content-contact {
+    display: flex;
+    padding: 5% 10%;
+    justify-content: space-around;
+    margin-top: 12%;
+}
+h1{
+    font-family: space-grotesk-bold;
+    font-size: 30px;
+    color: #ffffff;
+    font-size: 50px;
+}
+.penta-contact__body-content-contact-details{
+    width: 25%;
+}
+.penta-contact__body-content-contact-details-location{
+    margin-top: 20px;
+}
+.penta-contact__body-content-contact-details-location-text{
+    margin-top: 10px;
+}
+.penta-contact__body-content-contact-details-location p{
+    font-family: space-grotesk-reg;
+    color: #FF7FE8;
+    text-align: justify;
+   
+}
+.penta-contact__body-content-contact-details-location-img img{
+    height: 50px;
+    border-radius: 6px;
+}
+
+.penta-contact__body-content-contact-earth img{
+    width: 300px;
+    height: 300px;
+}
+.penta-contact__body-content-contact-forms{
+    width: 40%;
+}
+form{
+    color: #fff;
+    font-family: space-grotesk-reg;
+}
+
+.penta-contact__body-content-contact-forms-names{
+    display: flex;
+}
+.penta-contact__body-content-contact-forms-names-firstname, .penta-contact__body-content-contact-forms-names-lastname{
+    width: 50%;
+    padding: 0 15px;
+}
+.penta-contact__body-content-contact-forms-email, .penta-contact__body-content-contact-forms-message, .penta-contact__body-content-contact-forms-button{
+    padding: 0 15px;
+}
+input{
+    height: 35px;
+}
+.input-group{
+}
+input, textarea{
+    background: #231B3B;
+    border: 1px solid#FF7FE8;
+    border-radius: 5px;
+    /* height: 30px; */
+    width: 100%;
+}
+
+
+.penta-contact__body-content-contact-forms-button button{
+    font-family: space-grotesk-reg;
+    width: 100%;
+    height:50px;
+    padding: 10px 0;
+    color:#fff;
+    outline: none;
+    background-image: -webkit-linear-gradient(45deg, #7319fa96, #ff33b4b0, #ff7e29ba);
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.penta-contact__body-content-contact-earth{
+    text-align: center;
+}
+.penta-contact__body-parallax-footer-img{
+    background-image: url('../assets/contact/contact_footer.jpeg');
+    background-repeat: no-repeat;
+    height: 100dvh;
+    background-size: contain;
+    background-position-y: bottom;
+    display: flex;
+    align-items: flex-end;
+}
+#contact_overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000030;
+    z-index: 0;
+}
+
+/* Mobile Screens */
+@media(max-width: 1440px){
+    .penta-contact__body-content-contact-details {
+        width: 50%;
+    }
+    .penta-contact__body-content-contact-forms {
+        width: 50%;
+    }
+}
+
+@media(max-width: 1024px){
+    .penta-contact__body-header-logo img {
+        width: 100%;
+        padding: 20px 50px 0;
+    }
+}
+@media(max-width: 860px){
+    h1{
+        font-size: 40px;
+    }
+    .penta-contact__body-content-contact-details-location-img img {
+        height: 40px;
+    }
+    .penta-contact__body-content-contact-details-location p {
+        font-size: 14px;
+    }
+}
+@media(max-width: 640px){
+    .penta-contact__body-header-logo img {
+        padding: 20px 25px 0;
+    }
+    .penta-contact__body-content-contact {
+        padding: 5% 5%;
+        margin-top: 20%;
+    }
+    .penta-contact__body-content-contact-details-location p {
+        font-size: 12px;
+    }
+    .penta-contact__body-content-contact-earth img {
+        width: 200px;
+        height: 200px;
+    }
+    .penta-contact__body-content-contact-earth {
+        position: relative;
+        top: 200px;
+        z-index: 1;
+    }
+}
+@media (max-width: 430px){
+    .penta-contact__body-header-logo {
+        width: 90%;
+    }
+    .penta-contact__body-header-logo img {
+        padding: 15px 15px 0;
+    }
+    .penta-contact__body-content-contact {
+        padding: 5% 10%;
+    }
+    .penta-contact__body-content-contact-forms {
+        padding-top: 30px;
+    }
+    .penta-contact__body-content-contact-forms-names-firstname, 
+    .penta-contact__body-content-contact-forms-names-lastname, 
+    .penta-contact__body-content-contact-forms-email, 
+    .penta-contact__body-content-contact-forms-message, 
+    .penta-contact__body-content-contact-forms-button {
+        padding: 0 4px;
+    }
+    .penta-contact__body-content-contact {
+        flex-direction: column;
+    }
+    .penta-contact__body-content-contact-details {
+        width: 100%;
+    }
+    .penta-contact__body-content-contact-forms {
+        width: 100%;
+    }
+    .penta-contact__body-content-contact-earth img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media(max-width: 320px){
+    .penta-contact__body-content-contact-earth img {
+        width: 125px;
+        height: 125px;
+    }
+}

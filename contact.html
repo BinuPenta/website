@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pentafold</title>
+        <link rel="icon" href="assets/logo_only_black.png" type="image/icon type">
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/64190a9cbe.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap core CSS -->
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/contact.css">
+    </head>
+    <body>
+        <div class="penta-contact__body">
+            <div class="penta-home__body-stars"></div>
+            <div class="penta-home__body-twinkling"></div>
+            <div class="penta-home__body-content">
+                <header class="penta-home__body-header">
+                    <div class="penta-contact__body-header-logo"><img src="./assets/logo_new.png" alt="logo"></div>
+                    <nav class="penta-home__body-navbar">
+                        <div class="penta-home__body-navbar-hamburger">
+                            <span class="penta-home__body-navbar-hamburger-bar"></span>
+                            <span class="penta-home__body-navbar-hamburger-bar"></span>
+                            <span class="penta-home__body-navbar-hamburger-bar"></span>
+                        </div>
+                        <div class="penta-home__body-navbar-menu">
+                            <ul>
+                                <li><a class="nav-link" href="index.html">Home</a></li>
+                                <!-- <li><a class="nav-link" href="#">Services</a></li>
+                                <li><a class="nav-link" href="#">Products</a></li> -->
+                                <li><a class="nav-link" href="about.html">About</a></li>
+                                <li><a class="nav-link" href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="penta-home__body-navbar-mobile">
+                        <div class="penta-home__body-navbar-mobile-hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <span class="penta-home__body-navbar-mobile-hamburger-bar"></span>
+                            <span class="penta-home__body-navbar-mobile-hamburger-bar"></span>
+                            <span class="penta-home__body-navbar-mobile-hamburger-bar"></span>
+                        </div>
+
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width:220px">
+                        <div class="offcanvas-header">
+                            <img src="./assets/logo_alpha.png" class="panta-home__body-navbar-mobile-logo_alpha" alt="logo">
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul>
+                                <li><a class="nav-link" href="index.html" data-bs-dismiss="offcanvas">Home</a></li>
+                                <!-- <li><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Services</a></li>
+                                <li><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Products</a></li> -->
+                                <li><a class="nav-link" href="about.html" data-bs-dismiss="offcanvas">About</a></li>
+                                <li><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Contact</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="penta-contact__body-content-body">
+                    <div class="penta-contact__body-parallax-wrapper">
+                        <div class="penta-contact__body-content-contact">
+                            <div class="penta-contact__body-content-contact-details">
+                                <h1>Contact Details</h1>
+                                <div class="penta-contact__body-content-contact-details-location">
+                                    <div class="penta-contact__body-content-contact-details-location-img"><img src="./assets/contact/uk_flag.png"></div>
+                                    <div class="penta-contact__body-content-contact-details-location-text">
+                                        <p>Units 15, We Are Super The Sovereign,<br> High St Weston-Super-Mare,<br> North Somerset BS23 1HL<br>
+                                        www.pentafold.co.uk<br>
+                                        +44-7784-825-132<br>
+                                        contact@pentafold.co.uk</p>
+                                    </div>
+                                </div>
+                                <div class="penta-contact__body-content-contact-details-location">
+                                    <div class="penta-contact__body-content-contact-details-location-img"><img src="./assets/contact/india_flag.png"></div>
+                                    <div class="penta-contact__body-content-contact-details-location-text">
+                                        <p>Pentafold India Pvt Ltd,<br>TC 98/3633,<br> 2nd floor Connect Hive,<br>Asiatic Business Centre,<br> Kazhakuttam-695582.<br>
+                                        www.pentafold.in<br>
+                                        +91 9567734382<br>
+                                        contact@pentafold.co.uk</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="penta-contact__body-content-contact-forms">
+                                <form>
+                                    <div class="penta-contact__body-content-contact-forms-names">
+                                        <div class="penta-contact__body-content-contact-forms-names-firstname">
+                                            First Name <br><input type="text" id="name" required>
+                                            <label for="name"></label>
+                                        </div>
+                                        <div class="penta-contact__body-content-contact-forms-names-lastname">
+                                            Last Name<br><input type="text" id="name" required>
+                                            <label for="name"></label>
+                                        </div>
+                                    </div>
+                                    <div class="penta-contact__body-content-contact-forms-email">
+                                        Email Id<br><input type="email" id="email" required>
+                                        <label for="email"></label>
+                                    </div>
+                                    <div class="penta-contact__body-content-contact-forms-message">
+                                        Message<br><textarea id="message" rows="8" cols="15"></textarea>
+                                        <label for="message"></label>
+                                    </div>
+                                </form>
+                                <div class="penta-contact__body-content-contact-forms-button">
+                                    <button type="submit">Click to Launch!</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="penta-contact__body-content-contact-earth">
+                            <img src="./assets/contact/earth.png" class="globe">
+                        </div>
+                        <!-- Footer -->
+                        <div class="penta-home__body-parallax-footer parallax-wrapper-group">
+                            <div class="penta-contact__body-parallax-footer-img">
+                                <!-- <img src="./assets/footer.png" alt="footer"> -->
+                                <div id="contact_overlay"></div>
+                                <div class="penta-home__body-parallax-footer-content">
+                                    <div class="penta-home__body-parallax-footer-content-info">
+                                        <div class="penta-home__body-parallax-footer-content-info-details company">
+                                            <h3>Company</h3>
+                                            <ul>
+                                                <li>About Us</li>
+                                                <li>Contact Us</li>
+                                            </ul>
+                                        </div>
+                                        <div class="penta-home__body-parallax-footer-content-info-details products">
+                                            <h3>Products</h3>
+                                            <ul>
+                                                <li>PentaLearn</li>
+                                                <li>AcuteStudy</li>
+                                                <li>PentaPedia</li>
+                                                <li>GlucoMate</li>
+                                            </ul>
+                                        </div>
+                                        <div class="penta-home__body-parallax-footer-content-info-details service">
+                                            <h3>Services</h3>
+                                            <ul>
+                                                <li>Web Development</li>
+                                                <li>Artificial Intelligence</li>
+                                                <li>App Development</li>
+                                                <li>Business Analytics</li>
+                                                <li>IT Consulting</li>
+                                                <li>E-Commercial Expertise</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="penta-home__body-parallax-footer-content-badge">
+                                        <iframe class="cyber-essentials" src="https://registry.blockmarktech.com/certificates/76103d91-4dd5-42a6-a38c-7161be4b47f2/widget/?non_padded=t&tooltip_position=bottom_right&theme=transparent&hover=t"></iframe>                        
+                                    </div>
+                                    <div class="penta-home__body-parallax-footer-content-copyright">Copyright © Pentafold Limited 2023-2025. All Rights Reserved</div>
+                                </div>       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
