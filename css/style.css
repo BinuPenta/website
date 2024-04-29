@@ -608,12 +608,12 @@ a{
     align-items: flex-end;
 }
 
-.penta-home__body-parallax-footer-img img{
+/* .penta-home__body-parallax-footer-img img{
     opacity: 1;
     width: 100%;
     transform: translate(0%, 50%);
     transition: transform 2s ease-out;
-}
+} */
 .penta-home__body-parallax-footer-content{
     width: 100%;
     z-index: 1;
@@ -645,6 +645,9 @@ a{
 }
 .penta-home__body-parallax-footer-content-badge{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cyber-essentials{
     border: none;
@@ -667,6 +670,15 @@ a{
     bottom: 0;
     background-color: #00000069;
     z-index: 0;
+}
+#demo{
+    width: 10%;
+}
+#demo img{
+    width: 100%;
+}
+#demo span{
+    color: #ffffff;
 }
 
 
@@ -798,10 +810,13 @@ a{
 }
 @media(max-width: 1100px){
     .top-layer .penta-home__body-image {
-        left: 25px;
+        left: 40px;
     }    
     .top-layer .penta-home__body-image img {
         /* left: 4%; */
+    }
+    #demo span {
+        font-size: 12px;
     }
     
 }
@@ -887,7 +902,9 @@ a{
     } */
 }
 @media(max-width: 960px){
-
+    .top-layer .penta-home__body-image {
+        left: 35px;
+    }
     .penta-home__body-text-title {
         font-size: 52px;
         line-height: 60px;
@@ -908,6 +925,7 @@ a{
         height: 100%;
     }
     .top-layer .penta-home__body-image {
+        left: 30px;
         bottom: 26px;
     }
     .top-layer .penta-home__body-image img {
@@ -945,6 +963,24 @@ a{
     /* .penta-home__body-parallax-footer-img {
         top: 70%;
     } */
+    #demo span {
+        display: none;
+    }
+}
+/* Media Query for iPads  */
+@media (max-width: 820px) and (max-height: 1106px){
+    .penta-home__body-parallax-services {
+        height: 150dvh;
+    }
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+    .top-layer .penta-home__body-image {
+        bottom: 36px;
+    }
+    .penta-home__body-parallax-services {
+        height: 150dvh;
+    }
 }
 
 @media(max-width: 768px) {
@@ -1058,7 +1094,8 @@ a{
         line-height: 35px;
     }
     .top-layer .penta-home__body-image {
-        left: 17px;
+        left: 42px;
+        bottom: 15px;
     }
     .penta-home__body-parallax-about-text-head {
         font-size: 40px;
@@ -1110,6 +1147,9 @@ a{
     .penta-home__body-image {
         left: 25px;
     }
+    #demo {
+        width: 15%;
+    }
 }
 @media(max-width: 470px){
 
@@ -1120,6 +1160,64 @@ a{
         font-size: 35px;
     }
 }
+@media(max-width: 430px){
+    .penta-home__body-header-logo img {
+        padding: 20px 15px 0;
+    }
+    .penta-home__body-text-title {
+        font-size: 26px;
+    }
+    .top-layer .penta-home__body-image {
+        bottom: 12px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-parallax-about {
+        margin: 60% 0 10%;
+    }
+    .penta-home__body-parallax-services {
+        height: 350dvh;
+    }
+    .penta-home__body-parallax-services-head{
+        width: 100%;
+    }
+    .penta-home__body-parallax-products-section-items{
+        width: 70%;
+    }
+    .penta-home__body-parallax-products {
+        height: 150dvh;
+    }
+}
+@media (max-width: 430px) and (max-height: 932px) { 
+    .top-layer .penta-home__body-image {
+        bottom: 12px;
+        left: 37px;
+    }
+    .penta-home__body-parallax-about {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-services-head{
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact-container {
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-content {
+        padding: 0 20px;
+    }
+    .penta-home__body-parallax-footer-content-info {
+        flex-direction: column;
+    }
+
+}
+
 @media(max-width: 428px) {
 
     /* .penta-home__body-parallax-footer-img img {
@@ -1133,6 +1231,93 @@ a{
         margin: 0 5%;
     }
 }
+@media (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3) { 
+  
+    .penta-home__body-text {
+        padding: 170px 0px;
+    }
+    .penta-home__body-parallax-wrapper {
+        overflow-x: hidden;
+    }
+    .penta-home__body-text-title {
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .penta-home__body-parallax-about-text-head {
+        font-size: 28px;
+    }
+
+    .penta-home__body-parallax-about-text p {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+    .penta-home__body-parallax-about-text a i{
+        font-size: 1em;
+    }
+    .penta-home__body-parallax-services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .penta-home__body-parallax-contact {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .penta-home__body-parallax-contact-container {
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-info-details h3 {
+        font-size: 20px;
+    }
+    .penta-home__body-parallax-footer-info-details ul li {
+        font-family: space-grotesk-reg;
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+    .penta-home__body-parallax-contact-container-desc {
+        padding-bottom: 40px;
+        font-size: 12px;
+    }
+    .penta-home__body-parallax-contact-container-title {
+        font-size: 25px;
+    }
+    .penta-home__body-parallax-footer {
+        overflow-x: hidden;
+    }
+ 
+    .penta-home__body-parallax-footer-info {
+        top: 71%;
+        padding: 10px 0;
+    }
+ }
+@media (max-width: 428px) and (max-height: 746px) { 
+    .top-layer .penta-home__body-image {
+        left: 54px;
+        bottom: 12px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-image {
+        left: 40px;
+    }
+    .penta-home__body-parallax-services {
+        height: 320dvh;
+    }
+    .penta-home__body-parallax-services-head{
+        width: 100%;
+
+    }
+    .penta-home__body-parallax-products-section-items{
+        width: 70%;
+    }
+    .penta-home__body-parallax-contact {
+        padding-top: 40%;
+    }
+}
+
 @media(max-width: 425px){
 
     .penta-home__body-header-logo {
@@ -1179,8 +1364,8 @@ a{
         line-height: 22px;
     }
     .top-layer .penta-home__body-image {
-        left: 17px;
-        bottom: 17px;
+        left: 40px;
+        bottom: 13px;
     }
     .penta-home__body-parallax-about-img{
         width: fit-content;
@@ -1246,11 +1431,46 @@ a{
     }
 
 }
+@media (max-width: 414px) and (max-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .top-layer .penta-home__body-image {
+        left: 54px;
+    }
+    .penta-home__body-text {
+        padding: 160px 0px;
+    }
+    .penta-home__body-parallax-footer-info-details h3 {
+        font-size: 14px;
+    }
+    .penta-home__body-parallax-footer-info-details ul li {
+        font-size: 8px;
+    }
+
+    .penta-home__body-parallax-footer-info {
+        top: 76%;
+    }
+        
+ }
 @media(max-width: 412px){
 
     .penta-home__body-parallax-footer-info {
         top: 75%;
     }
+}
+@media (max-width: 412px) and (max-height: 915px){
+    .top-layer .penta-home__body-image {
+        bottom: 10px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-text-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .penta-home__body-parallax-services {
+        height: 350dvh;
+    }
+
 }
 
 @media(max-width: 390px){
@@ -1264,7 +1484,7 @@ a{
         width: 60%;
     }
     .top-layer .penta-home__body-image {
-        left: 15px;
+        left: 38px;
     }
     .penta-home__body-header-logo img {
         padding: 20px 15px 0;
@@ -1289,7 +1509,72 @@ a{
     .penta-home__body-parallax-footer-info-details ul li {
         font-size: 8px;
     }
+    #demo {
+        width: 20%;
+    }
+}
+@media (max-width: 390px) and (max-height: 844px) { 
+    .penta-home__body-image {
+        left: 39px;
+    }
+    .top-layer .penta-home__body-image {
+        bottom: 12px;
+        left: 52px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-parallax-about {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-services-head{
+        width: 100%;
+
+    }
+    .penta-home__body-parallax-products-section-items{
+        width: 70%;
+    }
+    .penta-home__body-parallax-contact {
+        padding-top: 40%;
+    }
+    .penta-home__body-parallax-contact {
+        flex-direction: column;
+    }
+    .penta-home__body-parallax-contact-container {
+        width: 100%;
+    }
+    .penta-home__body-parallax-contact-form {
+        width: 100%;
+    }
+    .penta-home__body-parallax-footer-content {
+        padding: 0 20px;
+    }
+    .penta-home__body-parallax-footer-content-info {
+        flex-direction: column;
+    }
+
+
+}
+@media(max-width: 390px) and (max-height: 763px){
+    .top-layer .penta-home__body-image {
+        left: 52px;
+        bottom: 10px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-parallax-services {
+        height: 350dvh;
+    }
     
+}
+@media(max-width: 390px) and (max-height: 664px){
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+    }
+    .penta-home__body-parallax-services {
+        height: 360dvh;
+    }
 }
 @media (max-width: 375px){
 
@@ -1298,10 +1583,49 @@ a{
         line-height: 22px;
     }
 }
+@media (max-width: 375px) and (max-height: 667px){
+
+    .penta-home__body-text-title {
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+
+    .penta-home__body-text-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .penta-home__body-parallax-services {
+        height: 360dvh;
+    }
+    .penta-home__body-parallax-products {
+        height: 170dvh;
+    }
+
+}
+@media (max-width: 360px) and (max-height: 740px){
+ 
+    .top-layer .penta-home__body-image {
+        left: 50px;
+        bottom: 12px;
+    }
+    .top-layer .penta-home__body-image img {
+        width: 60%;
+        top: 0px;
+        left: 0px;
+    }
+    .penta-home__body-parallax-services {
+        height: 320dvh;
+    }
+    .vertical-text-orientation {
+        font-size: 60px;
+    }
+
+}
 @media(max-width: 320px){
 
     .top-layer .penta-home__body-image {
-        left: 13px;
+        left: 35px;
     }
     .vertical-text-orientation {
         font-size: 60px;
@@ -1317,7 +1641,7 @@ a{
     }
 }
 /* Media Query for iPads  */
-@media (max-width: 820px) and (max-height: 1106px){
+/* @media (max-width: 820px) and (max-height: 1106px){
     .penta-home__body-parallax-services {
         height: 150dvh;
     }
@@ -1330,7 +1654,7 @@ a{
     .penta-home__body-parallax-services {
         height: 150dvh;
     }
-}
+} */
 
 /* Media query for iphones  */
 
@@ -1340,7 +1664,9 @@ a{
         font-size: 17px;
         line-height: 19px;
     }
-   
+    .penta-home__body-image {
+        left: 25px;
+    }
     .top-layer .penta-home__body-image img {
         /* left: 22px;
         top: 3px; */
@@ -1429,7 +1755,7 @@ a{
 
 
 
-@media (max-width: 430px) and (max-height: 932px) { 
+/* @media (max-width: 430px) and (max-height: 932px) { 
     .top-layer .penta-home__body-image {
         bottom: 34px;
         left: 37px;
@@ -1485,8 +1811,8 @@ a{
     .penta-home__body-parallax-products {
         height: 150dvh;
     }
-}
-@media (max-width: 428px) and (max-height: 746px) { 
+} */
+/* @media (max-width: 428px) and (max-height: 746px) { 
     .top-layer .penta-home__body-image {
         left: 54px;
         bottom: 12px;
@@ -1512,12 +1838,12 @@ a{
     }
 
 
-}
-@media (max-width: 414px) and (max-height: 896px){
+} */
+/* @media (max-width: 414px) and (max-height: 896px){
 
 
-}
-@media (max-width: 412px) and (max-height: 915px){
+} */
+/* @media (max-width: 412px) and (max-height: 915px){
     .top-layer .penta-home__body-image {
         bottom: 10px;
     }
@@ -1532,8 +1858,8 @@ a{
         height: 350dvh;
     }
 
-}
-@media (max-width: 390px) and (max-height: 844px) { 
+} */
+/* @media (max-width: 390px) and (max-height: 844px) { 
     .penta-home__body-image {
         left: 39px;
     }
@@ -1594,8 +1920,8 @@ a{
     .penta-home__body-parallax-services {
         height: 360dvh;
     }
-}
-@media (max-width: 375px) and (max-height: 667px){
+} */
+/* @media (max-width: 375px) and (max-height: 667px){
 
     .penta-home__body-text-title {
         font-size: 25px;
@@ -1614,8 +1940,8 @@ a{
         height: 170dvh;
     }
 
-}
-@media (max-width: 360px) and (max-height: 740px){
+} */
+/* @media (max-width: 360px) and (max-height: 740px){
  
     .top-layer .penta-home__body-image {
         left: 50px;
@@ -1633,11 +1959,11 @@ a{
         font-size: 60px;
     }
 
-}
+} */
 
 
 
-@media (max-width: 414px) and (max-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+/* @media (max-width: 414px) and (max-height: 736px) and (-webkit-device-pixel-ratio: 3) {
    
     .penta-home__body-text {
         padding: 160px 0px;
@@ -1653,8 +1979,8 @@ a{
         top: 76%;
     }
         
- }
- @media (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3) { 
+ } */
+ /* @media (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3) { 
   
     .penta-home__body-text {
         padding: 170px 0px;
@@ -1714,4 +2040,4 @@ a{
         top: 71%;
         padding: 10px 0;
     }
- }
+ } */
