@@ -86,29 +86,31 @@
                                 </div>
                             </div>
                             <div class="penta-contact__body-content-contact-forms">
-                                <form>
+                                <form method="POST" id="contact_form">
+                                    <input type="hidden" name="access_key" value="6955de05-81bb-45c3-8c55-3fa2de2e9bb3">
                                     <div class="penta-contact__body-content-contact-forms-names">
                                         <div class="penta-contact__body-content-contact-forms-names-firstname">
                                             First Name <br><input type="text" id="name" required>
                                             <label for="name"></label>
                                         </div>
                                         <div class="penta-contact__body-content-contact-forms-names-lastname">
-                                            Last Name<br><input type="text" id="name" required>
+                                            Last Name<br><input type="text" name="name"  id="name" required>
                                             <label for="name"></label>
                                         </div>
                                     </div>
                                     <div class="penta-contact__body-content-contact-forms-email">
-                                        Email Id<br><input type="email" id="email" required>
+                                        Email Id<br><input type="email" name="email"  id="email" required>
                                         <label for="email"></label>
                                     </div>
                                     <div class="penta-contact__body-content-contact-forms-message">
-                                        Message<br><textarea id="message" rows="8" cols="15"></textarea>
+                                        Message<br><textarea id="message" name="message"  rows="8" cols="15"></textarea>
                                         <label for="message"></label>
                                     </div>
+                                    <div class="penta-contact__body-content-contact-forms-button">
+                                        <button type="submit">Click to Launch!</button>
+                                    </div>
                                 </form>
-                                <div class="penta-contact__body-content-contact-forms-button">
-                                    <button type="submit">Click to Launch!</button>
-                                </div>
+                                <div id="contact_result"></div>
                             </div>
                             
                         </div>
@@ -163,5 +165,7 @@
         </div>
         <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./js/index.js"></script>
+        <script src="./js/form.js"></script>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
     </body>
 </html>

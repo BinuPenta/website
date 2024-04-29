@@ -567,6 +567,7 @@ a{
     flex-direction: column;
     width: 100%;
     background: #000;
+    color: #ffffff;
 }
 .penta-home__body-parallax-contact-form-row-label{
     position: relative;
@@ -581,9 +582,14 @@ a{
     border: none;
     background: #000;
     border-bottom: 1px solid #ffffff;
+    color: #ffffff;
 }
 .penta-home__body-parallax-contact-form-action{
     width: 200px;
+}
+#contact_result {
+    color: #ffffff;
+    text-align: center;
 }
 
 /* Footer */

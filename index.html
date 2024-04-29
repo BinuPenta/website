@@ -229,42 +229,44 @@
                         </div>
                     </div>
                     <div class="penta-home__body-parallax-contact-form">
-                        <form>
+                        <form method="POST" id="contact_form">
+                            <input type="hidden" name="access_key" value="6955de05-81bb-45c3-8c55-3fa2de2e9bb3">
                             <div class='penta-home__body-parallax-contact-form-row'>
                                 <!-- <span class="penta-home__body-parallax-contact-form-row-icon"><i class="fa-solid fa-alien"></i></span> -->
                                 <div class="penta-home__body-parallax-contact-form-row-content">
                                     <span class="penta-home__body-parallax-contact-form-row-label">First Name</span>
-                                    <input class='penta-home__body-parallax-contact-form-row-input' type='text' placeholder='First'>
+                                    <input class='penta-home__body-parallax-contact-form-row-input' type='text' name="first_name" placeholder='First'>
                                 </div>
                                 <div class="penta-home__body-parallax-contact-form-row-content">
                                     <!-- <span class="penta-home__body-parallax-contact-form-row-icon"><i class="fa-solid fa-mailbox"></i></span> -->
                                     <span class="penta-home__body-parallax-contact-form-row-label">Last Name</span>
-                                    <input class='penta-home__body-parallax-contact-form-row-input' type='text' placeholder='Last'>
+                                    <input class='penta-home__body-parallax-contact-form-row-input' type='text' name="last_name" placeholder='Last'>
                                 </div>
                             </div>
                             <div class='penta-home__body-parallax-contact-form-row'>
                                 <div class="penta-home__body-parallax-contact-form-row-content">
                                 <!-- <span class="penta-home__body-parallax-contact-form-row-icon"><i class="fa-solid fa-phone-rotary"></i></span> -->
                                     <span class="penta-home__body-parallax-contact-form-row-label">Email</span>
-                                    <input class='penta-home__body-parallax-contact-form-row-input' type='email' placeholder='Email'>
+                                    <input class='penta-home__body-parallax-contact-form-row-input' type='email' name="email" placeholder='Email'>
                                </div>
 
                                 <div class="penta-home__body-parallax-contact-form-row-content">
                                     <span class="penta-home__body-parallax-contact-form-row-label">Phone</span>
-                                    <input class='penta-home__body-parallax-contact-form-row-input' type='tel' maxlength="10" placeholder='Phone No.'>
+                                    <input class='penta-home__body-parallax-contact-form-row-input' type='tel' name="phone" maxlength="10" placeholder='Phone No.'>
                                 </div>
                             </div>
                             <div class='penta-home__body-parallax-contact-form-row'>
                                 <div class="penta-home__body-parallax-contact-form-row-message">
                                     <span class="penta-home__body-parallax-contact-form-row-label">Message</span>
-                                    <textarea class='penta-home__body-parallax-contact-form-row-message' rows="4" cols="15"></textarea>
+                                    <textarea class='penta-home__body-parallax-contact-form-row-message' rows="4" name="message" cols="15"></textarea>
                                 </div>
                             </div>
                             <div class='penta-home__body-parallax-contact-form-row'>
-                                <input class="penta-home__body-parallax-contact-form-action penta-button-style" type="button" value="Click to Launch !">
+                                <input class="penta-home__body-parallax-contact-form-action penta-button-style" type="submit" value="Click to Launch !">
                             </div>
         
                         </form>
+                        <div id="contact_result"></div>
                     </div>
                 </div>
                 <!-- Footer -->
@@ -317,6 +319,8 @@
 <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- <script src="./js/tilt/tilt.jquery.js"></script> -->
 <script src="./js/index.js"></script>
+<script src="./js/form.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <!-- <script src="./js/OwlCarousel/dist/owl.carousel.min.js"></script> -->
 </body>
 </html>

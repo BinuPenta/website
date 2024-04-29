@@ -83,8 +83,12 @@ input, textarea{
     border-radius: 5px;
     /* height: 30px; */
     width: 100%;
+    color: #ffffff;
 }
-
+#contact_result {
+    color: #ffffff;
+    text-align: center;
+}
 
 .penta-contact__body-content-contact-forms-button button{
     font-family: space-grotesk-reg;
