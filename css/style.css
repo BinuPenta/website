@@ -208,6 +208,7 @@ a{
     perspective: 600px;
     overflow-y: auto;
     scrollbar-color: #000 #000;
+    scrollbar-width: none;
 }
 .penta-home__body-parallax-landinglogo{
     height: 100%;
