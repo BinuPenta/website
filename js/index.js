@@ -9,6 +9,7 @@ $(document).ready(function(){
     const midTextLayer = $('.mid-layer').find('.penta-home__body-text');
     const topLayer = $('.top-layer');
     const topTextLayer = $('.top-layer').find('.penta-home__body-text');
+    const careLearnerButton = $('#penta-carelearner-button')
 
     const footerImg = $('.penta-home__body-parallax-footer-img img')
 
@@ -115,6 +116,9 @@ $(document).ready(function(){
         }
         
     }
+    careLearnerButton.on("click", () => {
+        window.location.href = 'https://carelearner.co.uk'
+    })
 
     hamburger.on("click", () => {
         hamburger.toggleClass("active");

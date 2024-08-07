@@ -628,6 +628,10 @@ a{
 }
 .penta-home__body-parallax-footer-content-info-details{
     color: #ffffff;
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
 }
 .penta-home__body-parallax-footer-content-info-details h3{
     font-family: space-grotesk-reg;
