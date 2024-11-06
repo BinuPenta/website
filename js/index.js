@@ -9,9 +9,12 @@ $(document).ready(function(){
     const midTextLayer = $('.mid-layer').find('.penta-home__body-text');
     const topLayer = $('.top-layer');
     const topTextLayer = $('.top-layer').find('.penta-home__body-text');
-    const careLearnerButton = $('#penta-carelearner-button')
+    const careLearnerButton = $('#penta-carelearner-button');
+    const firstProduct = $('#product-section-1');
+    const secondProduct = $('#product-section-2');
+    const thirdProduct = $('#product-section-3');
 
-    const footerImg = $('.penta-home__body-parallax-footer-img img')
+    // const footerImg = $('.penta-home__body-parallax-footer-img img')
 
     var screenWidth =  $(window).width();
     responsiveMenuBar(screenWidth);
@@ -22,12 +25,13 @@ $(document).ready(function(){
             
     }
     const eventTextParallax = function() {
+        // console.log(parallax.scrollTop())
         eventBaseLayer();
         eventMidLayer();
         eventTopLayer();
     }
     const eventBaseLayer = function(){
-        if(parallax.scrollTop() >= 60 && parallax.scrollTop() <= 900){
+        if(parallax.scrollTop() >= 75 && parallax.scrollTop() <= 1000){
             baseLayer.css({'opacity' : 1});
             if(isSafariBrowser()){
                 baseLayer.css({'transform' : 'none'})
@@ -38,7 +42,7 @@ $(document).ready(function(){
         }
     }
     const eventMidLayer = function(){
-        if(parallax.scrollTop() >= 100 && parallax.scrollTop() <= 900){
+        if(parallax.scrollTop() >= 100 && parallax.scrollTop() <= 1000){
             midLayer.css({'opacity' : 1});
             baseTextLayer.css({'opacity': 0});
             midTextLayer.css({'opacity': 1})
@@ -53,7 +57,7 @@ $(document).ready(function(){
         }
     }
     const eventTopLayer = function(){
-        if(parallax.scrollTop() >= 160 && parallax.scrollTop() <= 900){
+        if(parallax.scrollTop() >= 160 && parallax.scrollTop() <= 1000){
             topLayer.css({'opacity' : 1});
             midTextLayer.css({'opacity': 0});
             topTextLayer.css({'opacity': 1});
@@ -73,13 +77,16 @@ $(document).ready(function(){
                 'opacity': 0
             })
         }
-        else{
+        else {
             $('.penta-home__body-header-logo img').css({
                 'opacity': 0
             })
-            $('.penta-home__body-parallax-landinglogo img').css({
-                'opacity': 1
-            })
+            if(parallax.scrollTop() < 80) {
+                $('.penta-home__body-parallax-landinglogo img').css({
+                    'opacity': 1
+                })
+            }
+           
             $('.penta-home__body-parallax-landinglogo').css({
                 'height': heightCalculations()*1.25 + '%' 
             })
@@ -138,32 +145,66 @@ $(document).ready(function(){
         })
     }
     )
+    // Prodct parallax events
+    const eventProductParallax = function(){
+        let scrollPosition = parallax.scrollTop(); // Current scroll position
+        let viewportHeight = $(window).height();  // Height of the viewport
+        console.log('product:', scrollPosition)
+        console.log('viewportHeight:', viewportHeight)
+        eventFirstProduct(scrollPosition, viewportHeight)
+        eventSecondProduct(scrollPosition, viewportHeight)
+        eventThirdProduct(scrollPosition, viewportHeight)
+    }
+    const eventFirstProduct = function(scrollPosition, viewportHeight){
+        if(scrollPosition < viewportHeight * 2.7){
+            firstProduct.css({'opacity' : 1});
+        }
+        else{
+            firstProduct.css({'opacity' : 0});
+        }
+    }
+    const eventSecondProduct = function(scrollPosition, viewportHeight){
+        if(scrollPosition > (viewportHeight * 3.1) && scrollPosition < (viewportHeight * 3.6)){
+            secondProduct.css({'opacity' : 1});
+        }
+        else{
+            secondProduct.css({'opacity' : 0});
+        }
+    }
+    const eventThirdProduct = function(scrollPosition, viewportHeight){
+        if(scrollPosition > (viewportHeight * 4.1)){
+            thirdProduct.css({'opacity' : 1});
+        }
+        else{
+            thirdProduct.css({'opacity' : 0});
+        }
+    }
 
-    const eventFooterParallax = (footerResponsive) => {
-       if(parallax.scrollTop() >= footerResponsive){
-        $(footerImg).css({
-            'opacity': 1,
-        });
-       }
-       if(screenWidth >= 428){
-            if(parallax.scrollTop() >= footerResponsive && parallax.scrollTop() <= (footerResponsive + 50)){
-                const scrollValue = parallax.scrollTop() - Math.floor(parallax.scrollTop()/100) * 100
-                if(scrollValue <= 50){
+    // const eventFooterParallax = (footerResponsive) => {
+    //    if(parallax.scrollTop() >= footerResponsive){
+    //     $(footerImg).css({
+    //         'opacity': 1,
+    //     });
+    //    }
+    //    if(screenWidth >= 428){
+    //         if(parallax.scrollTop() >= footerResponsive && parallax.scrollTop() <= (footerResponsive + 50)){
+    //             const scrollValue = parallax.scrollTop() - Math.floor(parallax.scrollTop()/100) * 100
+    //             if(scrollValue <= 50){
                     
-                    $(footerImg).css({
-                        'transform': `translate(0%, ${50 - scrollValue}%)`
-                    })
-                }
-            }
-            else{
-                $(footerImg).css({
-                    'transform': `translate(0%, 0%)`
-                })
-            }
-       }
+    //                 $(footerImg).css({
+    //                     'transform': `translate(0%, ${50 - scrollValue}%)`
+    //                 })
+    //             }
+    //         }
+    //         else{
+    //             $(footerImg).css({
+    //                 'transform': `translate(0%, 0%)`
+    //             })
+    //         }
+    //    }
         
 
-    }
+    // }
      
 
     parallax.on('scroll mousewheel', function(event) {
@@ -171,12 +212,28 @@ $(document).ready(function(){
             scrollTop: $(parallax).offset().top
           }, 10000);
         screenWidth = $(window).width(); // New width
-        var footerResponsive =  responsiveScreenFooter(screenWidth);
+        // var footerResponsive =  responsiveScreenFooter(screenWidth);
+
         moveLogo();
         eventTextParallax()
-        eventFooterParallax(footerResponsive)
+        // console.log(parallax.scrollTop())
+        // eventProductParallax()
+        // eventFooterParallax(footerResponsive)
     })
 })
+
+// window.addEventListener('scroll', function() {
+//     let element = document.getElementById('disappear');
+//     let scrollPosition = window.scrollY;
+//     console.log(scrollPosition)
+    
+    // Set the scroll position where the element should disappear
+    // if (scrollPosition > 300) { // Adjust this value as needed
+    //     element.classList.add('hidden');
+    // } else {
+    //     element.classList.remove('hidden');
+    // }
+// });
 
 
 const responsiveScreenFooter = function(screenWidth) {
