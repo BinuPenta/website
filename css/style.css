@@ -1029,9 +1029,10 @@ a{
 .penta-home__body-parallax-certs{
     height: 100vh;
     display: flex;
+    width: 100vw;
 }
 .penta-home__body-parallax-certs-content-badge{
-    width: 100vw;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: row-reverse;
@@ -1039,8 +1040,12 @@ a{
     justify-content: center;
 }
 .penta-home__body-parallax-certs-content-badge-title{
+    width: 20%;
     float: right;
     color: #ffffff;
+}
+.penta-home__body-parallax-certs-content-badge-items{
+    width: 80%;
 }
 .penta-home__body-parallax-certs-content-badge-items-para{
     font-family: space-grotesk-reg;
@@ -2097,7 +2102,7 @@ a{
         font-size: 7px;
     }
     .penta-home__body-parallax-concept {
-        height: 160vh;
+        height: 210vh;
     }
     .penta-home__body-parallax-concept-intro h3 {
         font-size: 32px;
