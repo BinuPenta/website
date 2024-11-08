@@ -1031,6 +1031,7 @@ a{
     display: flex;
 }
 .penta-home__body-parallax-certs-content-badge{
+    width: 100vw;
     text-align: center;
     display: flex;
     flex-direction: row-reverse;
@@ -1273,6 +1274,9 @@ a{
     .penta-home__body-parallax-services{
         height: 100dvh;
     }
+    .penta-home__body-parallax-concept{
+        height: 210vh;
+    }
     .penta-home__body-parallax-certs{
         display: flex;
 
@@ -1465,7 +1469,7 @@ a{
     .penta-home__body-parallax-concept-intro h3 {
         font-size: 60px;
     }
-    #product-card-2{
+    /* #product-card-2{
         --index: 2;
         animation: stacking-2 linear forwards;
         animation-timeline: --cards-container;
@@ -1477,7 +1481,7 @@ a{
         to{
             transform: scale(0.7);
         }
-    }
+    } */
     .vertical-text-orientation {
         font-size: 110px;
     }
