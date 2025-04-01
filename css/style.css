@@ -1257,6 +1257,9 @@ a{
     .penta-home__body-parallax-content {
         margin: 0 6%;
     }
+    .penta-home__body-parallax-footer{
+        margin: 0;
+    }
     
 }
 
@@ -1302,6 +1305,9 @@ a{
     .cyber-essentials{
         height: 86px;
         width: 70px;
+    }
+    .penta-home__body-parallax-footer{
+        margin: 0;
     }
 }
 @media (max-width: 1300px){
@@ -1378,6 +1384,9 @@ a{
     .penta-home__body-parallax-footer-content {
         padding: 30px 0;
     }
+    .penta-home__body-parallax-footer{
+        margin: 0;
+    }
 }
 @media(max-width: 1100px){
     #demo span {
@@ -1446,6 +1455,9 @@ a{
     .penta-home__body-parallax-footer-content-copyright {
         padding-top: 10px;
         font-size: 10px;
+    }
+    .penta-home__body-parallax-footer{
+        margin: 0;
     }
 
 }

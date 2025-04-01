@@ -17,6 +17,7 @@
     height: 100dvh;
     perspective: 600px;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 .penta-about__body-about{
     display: flex;
